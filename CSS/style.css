@@ -1,0 +1,22 @@
+body {
+    background-image: url(bgimage.png);
+    background-size:1500px;
+}
+
+h1 {
+    color:black;
+    text-align: center;
+    border: 5px solid rgba(30, 50, 60, 25%);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    display:inline-block;
+}
+
+.first {
+    color: white;
+    background-color: rgba(30, 50, 60, 35%);
+    border-radius: 5%;
+}
