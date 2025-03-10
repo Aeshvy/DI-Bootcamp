@@ -3,7 +3,6 @@ To get the wrap division to stay centered, you’ll need to set the left and rig
 
 body {
     background-color: cornflowerblue;
-    margin: auto;
 }
 
 ul {
