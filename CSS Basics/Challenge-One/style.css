@@ -1,0 +1,15 @@
+/* This challenge requires you to create a fixed-width layout that is centered in the browser window.
+To get the wrap division to stay centered, you’ll need to set the left and right margins to auto. */
+
+body {
+    background-color: cornflowerblue;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+li::first-letter {
+    font-size: 22px;
+}
