@@ -87,14 +87,14 @@
 
 # If the number is a multiple is a multiples of both three and five, print FizzBuzz instead.
 
-number_input = int(input("Enter a number between 1 and 100: "))
+# number_input = int(input("Enter a number between 1 and 100: "))
 
-if number_input % 15 == 0:
-    print("Fizzbuzz")
-elif number_input % 5 == 0:
-    print("Fizz")
-elif number_input % 3 == 0:
-    print("Buzz")
-else:
-    print("No Hablo Espanol")   
+# if number_input % 15 == 0:
+#     print("Fizzbuzz")
+# elif number_input % 5 == 0:
+#     print("Fizz")
+# elif number_input % 3 == 0:
+#     print("Buzz")
+# else:
+#     print("No Hablo Espanol")   
 
