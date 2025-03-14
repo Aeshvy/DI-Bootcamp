@@ -144,3 +144,115 @@
 #     print("You chose one of your favorite fruits! Enjoy!")
 # else:
 #     print("You chose a new fruit!")
+
+
+
+# 🌟 Exercise 8: Who ordered a pizza ?
+# Instructions
+# Write a loop that asks a user to enter a series of pizza toppings, when the user inputs ‘quit’ stop asking for toppings.
+# As they enter each topping, print a message saying you’ll add that topping to their pizza.
+# Upon exiting the loop print all the toppings on the pizza pie and what the total price is (10 + 2.5 for each topping).
+
+# ANSWER
+
+# toppings = []
+# print("Welcome, pleaese add your toppings, and when finished, type 'quit'")
+
+# while True:
+#     topping = input()
+#     if topping.lower() == 'quit':
+#         break
+
+#     toppings.append(topping)
+#     print(f"{topping} is added to your order, anything else? ")
+
+# total_price = 10 + 2.5 * len(toppings)
+
+# print("Your toppings are:")
+# for topping in toppings:
+#     print(topping)
+
+# print(f"your total price is {total_price}$")
+
+
+
+# 🌟 Exercise 9: Cinemax
+# Instructions
+# A movie theater charges different ticket prices depending on a person’s age.
+# if a person is under the age of 3, the ticket is free.
+# if they are between 3 and 12, the ticket is $10.
+# if they are over the age of 12, the ticket is $15.
+
+# Ask a family the age of each person who wants a ticket.
+
+# Store the total cost of all the family’s tickets and print it out.
+
+# ANSWER 
+
+# total_cost = 0
+# family_members = int(input("Welcome, how many tickets? "))
+
+# for n in range(1, family_members + 1):
+
+#     age = int(input(f"What is the age of member {n}? "))
+
+#     if age < 3:
+#         price = 0
+#         print(f"Family member {n} ticket is free!")
+#     elif 3 <= age <= 12:
+#         price = 10
+#         print(f"Family member {n} ticket is {price}.")
+#     else:
+#         price = 15
+#         print(f"Family member {n} ticket is {price}.")
+
+#     total_cost += price
+
+# print(f"The total cost for all tickets is ${total_cost}.")
+
+# A group of teenagers are coming to your movie theater and want to watch a movie that is restricted for people between the ages of 16 and 21.
+# Given a list of names, write a program that asks teenager for their age, if they are not permitted to watch the movie, remove them from the list.
+# At the end, print the final list.
+
+# teens = ["Alex", "Jenny", "Bob", "Alice"]
+
+# for teen in teens:
+#     age = int(input("What is your age? "))
+    
+#     if 16 <= age <= 21:
+#         print(f"{teen} is not allowed to watch the movie.")
+#         teens.remove(teen)
+
+#     elif print(f"{teen} can enter"):
+#         break 
+
+# print(f"Teenagers allowed to watch the movie {teens}")
+
+
+
+# 🌟 Exercise 10 : Sandwich Orders
+# Instructions
+# Using the list below :
+
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+# The deli has run out of pastrami, use a while loop to remove all occurrences of “Pastrami sandwich” from sandwich_orders.
+# We need to prepare the orders of the clients:
+# Create an empty list called finished_sandwiches.
+# One by one, remove each sandwich from the sandwich_orders while adding them to the finished_sandwiches list.
+
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+
+# while "Pastrami sandwich" in sandwich_orders:
+#         sandwich_orders.remove("Pastrami sandwich")
+
+#         finished_sandwiches = []
+
+# while sandwich_orders:                        # loop for sandwich list
+#     sandwich = sandwich_orders.pop(0)         # sandwich = updated sandwich list with .pop(0) - first sandwich removed
+#     finished_sandwiches.append(sandwich)      # finished sandwich list is updated with .append(sandiwch)
+#     print(f"I made your {sandwich.lower()}")
+
+
+
