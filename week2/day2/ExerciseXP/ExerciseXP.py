@@ -122,14 +122,18 @@ make_great()
 # 🌟 Exercise 7 : Temperature Advice
 
 # Create a function called get_random_temp().
-def get_random_temp():
-    return random.randint(-10, 40)
-
-print(get_random_temp())
-
-
 # This function should return an integer between -10 and 40 degrees (Celsius), selected at random.
-# Test your function to make sure it generates expected results.
+
+def get_random_temp(season):
+    if season == 'winter':
+        low_limit, high_limit = -10, 16
+    elif season == 'Autumn':
+        low_limit, high_limit = 17, 23
+    elif season == 'Spring':
+        low_limit, high_limit = 24, 32
+    elif season == 'Summer':
+        low_limit, high_limit = 33, 40
+    return random.randint(low_limit, high_limit)
 
 # Create a function called main().
 # Inside this function, call get_random_temp() to get a temperature, and store its value in a variable.
@@ -141,6 +145,27 @@ print(get_random_temp())
 # between 16 and 23
 # between 24 and 32
 # between 32 and 40
+
+def main():
+    season = (input('Input a season: '.lower()))
+    temperature = get_random_temp()
+    print(f'The temperature right now is {temperature} degrees Celsius.')
+    if temperature <= 0:
+        print("Brrr, that's freezing! Wear some extra layers today")
+    elif temperature <= 16:
+        print("Quite chilly! Don't forget your coat")
+    elif 16 < temperature <= 23:
+        print("The weather seems nice")
+    elif 24 <= temperature <=32:
+        print("Getting quite hot. Maybe wear something short")
+    elif 32 < temperature <= 40:
+        print("It's getting out of control. Get some sunscreen")
+    else:
+        print("This is too much. Stay home.")
+
+
+main()
+
 
 # Change the get_random_temp() function:
 # Add a parameter to the function, named ‘season’.
