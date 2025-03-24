@@ -107,9 +107,6 @@ def show_magician():
     for magician in magician_names:
         print(magician)
 
-# def make_great():
-#     print(magician_names | "the Great")
-
 def make_great():
     for magician in magician_names:
         print(magician + " the Great")
@@ -234,18 +231,19 @@ def quiz(data):
         else:
             print(f"Wrong! The correct answer is: {item['answer']}")
             wrong_answers.append((item["question"], user_answer, item["answer"]))
-    
-    display_results(correct_answers, len(data) - correct_answers)
 
-    if wrong_answers:
-        print("\nHere are the wrong answers:")
-        for question, user_answer, correct_answer in wrong_answers:
-            print(f"Question: {question}")
-            print(f"Your Answer: {user_answer}")
-            print(f"Correct Answer: {correct_answer}\n")
+        print(f"You got {correct_answers} out of {len(data)} correct!")
+    
+    # display_results(correct_answers, len(data) - correct_answers)
+
+    # if wrong_answers:
+    #     print("\nHere are the wrong answers:")
+    # for question, user_answer, correct_answer in wrong_answers:
+    #     print(f"Question: {question}\nYour Answer: {user_answer}\nCorrect Answer: {correct_answer}\n")
+
       
-def display_results(correct_answers, incorrect_answers):
-    print(f"You got {correct_answers} correct and {incorrect_answers} incorrect answers.\nThank you for playing.")
+# def display_results(correct_answers, incorrect_answers):
+#     print(f"You got {correct_answers} correct and {incorrect_answers} incorrect answers.\nThank you for playing.")
 
 quiz(data)
   
