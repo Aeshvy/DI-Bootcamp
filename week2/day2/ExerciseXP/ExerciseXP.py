@@ -134,8 +134,8 @@ def get_random_temp(season):
     elif season == 'summer':
         low_limit, high_limit = 33, 40
 
-    # return random.randint(low_limit, high_limit)
-      return random.uniform(low_limit, high_limit)
+    return random.randint(low_limit, high_limit)
+    
 
 # Create a function called main().
 # Inside this function, call get_random_temp() to get a temperature, and store its value in a variable.
@@ -157,7 +157,7 @@ def main():
     print(f'The temperature right now is {temperature} degrees Celsius.')
 
 
-    if (temperature) <= 0:
+    if temperature <= 0:
         print("Brrr, that's freezing! Wear some extra layers today")
     elif temperature <= 16:
         print("Quite chilly! Don't forget your coat")
@@ -171,7 +171,7 @@ def main():
         print("This is too much. Stay home.")
 
 
-main()
+# main()
 
 
 # Change the get_random_temp() function:
@@ -181,5 +181,63 @@ main()
 # Before calling get_random_temp(), we will need to decide on a season, so that we can call the function correctly. Ask the user to type in a season - ‘summer’, ‘autumn’ (you can use ‘fall’ if you prefer), ‘winter’, or ‘spring’.
 # Use the season as an argument when calling get_random_temp().
 
-# Bonus: Give the temperature as a floating-point number instead of an integer.
-# Bonus: Instead of asking for the season, ask the user for the number of the month (1 = January, 12 = December). Determine the season according to the month.
+# ---------------------------------------------------------------------------
+
+# 🌟 Exercise 8 : Star Wars Quiz
+
+# This project allows users to take a quiz to test their Star Wars knowledge.
+# The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
+
+# Here is an array of dictionaries, containing those questions and answers
+
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977"
+    },
+    {
+        "question": "Who built C-3PO?",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
+
+
+def quiz(data):
+
+    correct_answers = 0
+
+    for item in data:
+
+        user_answer = input(item["question"] + " ")
+
+        if user_answer.lower() == item["answer"].lower():
+            print("Correct!")
+            correct_answers += 1
+        else:
+            print(f"Wrong! The correct answer is: {item['answer']}")
+    
+    print(f"You got {correct_answers} out of {len(data)} correct!")
+
+quiz(data)
+  
+
+# Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
+# Create a function that informs the user of his number of correct/incorrect answers.
+# Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
+# If he had more then 3 wrong answers, ask him to play again.
