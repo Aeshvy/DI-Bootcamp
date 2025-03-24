@@ -127,13 +127,15 @@ make_great()
 def get_random_temp(season):
     if season == 'winter':
         low_limit, high_limit = -10, 16
-    elif season == 'Autumn':
+    elif season == 'autumn':
         low_limit, high_limit = 17, 23
-    elif season == 'Spring':
+    elif season == 'spring':
         low_limit, high_limit = 24, 32
-    elif season == 'Summer':
+    elif season == 'summer':
         low_limit, high_limit = 33, 40
-    return random.randint(low_limit, high_limit)
+
+    # return random.randint(low_limit, high_limit)
+      return random.uniform(low_limit, high_limit)
 
 # Create a function called main().
 # Inside this function, call get_random_temp() to get a temperature, and store its value in a variable.
@@ -147,10 +149,15 @@ def get_random_temp(season):
 # between 32 and 40
 
 def main():
-    season = (input('Input a season: '.lower()))
-    temperature = get_random_temp()
+    
+    season = input('Input a season: ').lower()
+    
+
+    temperature = get_random_temp(season)
     print(f'The temperature right now is {temperature} degrees Celsius.')
-    if temperature <= 0:
+
+
+    if (temperature) <= 0:
         print("Brrr, that's freezing! Wear some extra layers today")
     elif temperature <= 16:
         print("Quite chilly! Don't forget your coat")
