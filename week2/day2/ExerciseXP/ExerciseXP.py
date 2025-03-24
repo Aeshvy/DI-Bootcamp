@@ -171,7 +171,7 @@ def main():
         print("This is too much. Stay home.")
 
 
-# main()
+main()
 
 
 # Change the get_random_temp() function:
@@ -188,7 +188,8 @@ def main():
 # This project allows users to take a quiz to test their Star Wars knowledge.
 # The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
 
-# Here is an array of dictionaries, containing those questions and answers
+# Here is an array of dictionaries, containing those questions and answers:
+
 
 data = [
     {
@@ -221,6 +222,7 @@ data = [
 def quiz(data):
 
     correct_answers = 0
+    wrong_answers = []
 
     for item in data:
 
@@ -231,13 +233,22 @@ def quiz(data):
             correct_answers += 1
         else:
             print(f"Wrong! The correct answer is: {item['answer']}")
+            wrong_answers.append((item["question"], user_answer, item["answer"]))
     
-    print(f"You got {correct_answers} out of {len(data)} correct!")
+    display_results(correct_answers, len(data) - correct_answers)
+
+    if wrong_answers:
+        print("\nHere are the wrong answers:")
+        for question, user_answer, correct_answer in wrong_answers:
+            print(f"Question: {question}")
+            print(f"Your Answer: {user_answer}")
+            print(f"Correct Answer: {correct_answer}\n")
+      
+def display_results(correct_answers, incorrect_answers):
+    print(f"You got {correct_answers} correct and {incorrect_answers} incorrect answers.\nThank you for playing.")
 
 quiz(data)
   
 
 # Create a function that asks the questions to the user, and check his answers. Track the number of correct, incorrect answers. Create a list of wrong_answers
 # Create a function that informs the user of his number of correct/incorrect answers.
-# Bonus : display to the user the questions he answered wrong, his answer, and the correct answer.
-# If he had more then 3 wrong answers, ask him to play again.
