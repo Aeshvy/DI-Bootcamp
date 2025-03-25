@@ -132,7 +132,9 @@ print(dog3.fight(dog2))
 # Implement the following methods:
 
 # born: adds a child to the members list (use **kwargs), don’t forget to print a message congratulating the family.
+
 # is_18: takes the name of a family member as a parameter and returns True if they are over 18 and False if not.
+
 # family_presentation: a method that prints the family’s last name and all the members’ details.
 
 # Create an instance of the Family class, with the last name of your choice, and the below members. Then call all the methods you created in Point 2.
@@ -143,11 +145,17 @@ class Family():
         self.members = []
         pass
 
-    def born(self):
-        pass
+    def born(self, **kwargs):
+        for key, value in kwargs.items():
+            self.members.append([key, value])
+        print('Congratulations on the new addition to the family!')
+        
 
-    def is_18(self):
-        pass
+    def is_18(self, name):
+        for member in self.members:
+            if member['name'] == name:
+                return member['age'] >= 18
+            return False
 
     def family_presentation(self):
         pass
