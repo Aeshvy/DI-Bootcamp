@@ -86,17 +86,17 @@ dog1 = Dog("Max", 3, 20)
 dog2 = Dog("Lax", 2, 25)
 dog3 = Dog("Dax", 4, 18)
 
-# print(dog1.bark())
-# print(dog2.bark())
-# print(dog3.bark())
+print(dog1.bark())
+print(dog2.bark())
+print(dog3.bark())
 
-# print(f"Max's run speed is {dog1.run_speed():.2f}")
-# print(f"Lax's run speed is {dog2.run_speed():.2f}")
-# print(f"Dax's run speed is {dog3.run_speed():.2f}")
+print(f"Max's run speed is {dog1.run_speed():.2f}")
+print(f"Lax's run speed is {dog2.run_speed():.2f}")
+print(f"Dax's run speed is {dog3.run_speed():.2f}")
 
-# print(dog1.fight(dog2))
-# print(dog1.fight(dog3))
-# print(dog3.fight(dog2))
+print(dog1.fight(dog2))
+print(dog1.fight(dog3))
+print(dog3.fight(dog2))
 
 # ---------------------------------------------------------------------------
 
@@ -117,3 +117,42 @@ dog3 = Dog("Dax", 4, 18)
 # “dog_name plays dead”.
 
 
+# ****      ANSWER IN IMPORT.PY     ****
+
+
+# ---------------------------------------------------------------------------
+
+# 🌟 Exercise 4 : Family
+
+# Create a class called Family and implement the following attributes:
+
+# members: list of dictionaries
+# last_name : (string)
+
+# Implement the following methods:
+
+# born: adds a child to the members list (use **kwargs), don’t forget to print a message congratulating the family.
+# is_18: takes the name of a family member as a parameter and returns True if they are over 18 and False if not.
+# family_presentation: a method that prints the family’s last name and all the members’ details.
+
+# Create an instance of the Family class, with the last name of your choice, and the below members. Then call all the methods you created in Point 2.
+
+class Family():
+    def __init__(self, last_name):
+        self.last_name = last_name
+        self.members = []
+        pass
+
+    def born(self):
+        pass
+
+    def is_18(self):
+        pass
+
+    def family_presentation(self):
+        pass
+
+[
+{'name':'Michael','age':35,'gender':'Male','is_child':False},
+{'name':'Sarah','age':32,'gender':'Female','is_child':False}
+]

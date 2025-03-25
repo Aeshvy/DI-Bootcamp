@@ -51,9 +51,11 @@ dog2 = PetDog("Dark", 2, 25)
 dog3 = PetDog("Lucy", 4, 18)
 
 dog1.train()
+# dog2.train()
+# dog3.train()
 
 dog1.do_a_trick()
-dog2.do_a_trick()
-dog3.do_a_trick()
+# dog2.do_a_trick()
+# dog3.do_a_trick()
 
 dog1.play(dog2, dog3)
