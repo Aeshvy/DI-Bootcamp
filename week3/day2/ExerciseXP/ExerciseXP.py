@@ -139,28 +139,70 @@ print(dog3.fight(dog2))
 
 # Create an instance of the Family class, with the last name of your choice, and the below members. Then call all the methods you created in Point 2.
 
-class Family():
+
+class Family:
     def __init__(self, last_name):
         self.last_name = last_name
         self.members = []
-        pass
 
     def born(self, **kwargs):
-        for key, value in kwargs.items():
-            self.members.append([key, value])
-        print('Congratulations on the new addition to the family!')
-        
+        kwargs['is_child'] = True
+        self.members.append(kwargs)
+        print(f"Congratulations! {kwargs['name']} has been born into the family!")
 
     def is_18(self, name):
-        for member in self.members:
-            if member['name'] == name:
-                return member['age'] >= 18
-            return False
+        for m in self.members:
+            if m.get('name') == name:
+                age = m.get('age', 0)
+        return False
 
     def family_presentation(self):
-        pass
+        print(f"Family Name: {self.last_name}")
+        for member in self.members:
+            # Print each member's details (name, age, gender, is_child)
+            print(f"Name: {member['name']}, Age: {member['age']}, Gender: {member['gender']}, Child: {member['is_child']}")
 
-[
-{'name':'Michael','age':35,'gender':'Male','is_child':False},
-{'name':'Sarah','age':32,'gender':'Female','is_child':False}
-]
+            
+
+# [
+#     {'name':'Michael','age':35,'gender':'Male','is_child':False},
+#     {'name':'Sarah','age':32,'gender':'Female','is_child':False}
+# ]
+
+
+my_family = Family('Eshy')
+
+
+my_family.members.append({'name': 'Michael', 'age': 35, 'gender': 'Male', 'is_child': False})
+my_family.members.append({'name': 'Sarah', 'age': 32, 'gender': 'Female', 'is_child': False})
+my_family.members.append({'name': 'Alex', 'age': 18, 'gender': 'Male', 'is_child': False})
+my_family.members.append({'name': 'Jenny', 'age': 16, 'gender': 'Female', 'is_child': True})
+
+
+my_family.born(name='Alex', age=0, gender='Male', is_child=True)
+
+
+print(my_family.is_18('Michael'))
+
+
+my_family.family_presentation()
+
+# ---------------------------------------------------------------------------
+
+# 🌟 Exercise 5 : TheIncredibles Family
+
+# Create a class called TheIncredibles. This class should inherit from the Family class:
+# This is no random family they are an incredible family, therefore the members attributes, will be a list of dictionaries containing the additional keys : power and incredible_name. (See Point 4)
+
+
+# Add a method called use_power, this method should print the power of a member only if they are over 18 years old. If not raise an exception (look up exceptions) which stated they are not over 18 years old.
+
+
+# Add a method called incredible_presentation which :
+
+# Print a sentence like “*Here is our powerful family **”
+# Prints the family’s last name and all the members’ details (ie. use the super() function, to call the family_presentation method)
+
+class TheIncredibles(Family):
+    def __init__(self):
+        pass
