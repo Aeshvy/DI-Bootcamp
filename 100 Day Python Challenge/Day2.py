@@ -1,4 +1,4 @@
-# Bill Tip Calculator
+# Tip Calculator
 
 bill = (float(input("Welcome to the tip calculator!\nWhat is your total bill: $")))
 tip = (int(input("How much would you like to tip? (10, 15, 20): ")))

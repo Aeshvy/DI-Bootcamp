@@ -1,95 +1,106 @@
-# Rock Paper Scissors Game
+# Password Encryptor
+
+
+
+# Password Generator (With Input)
 
 import random
 
-# heads_or_tails = random.randint(1,2)
-# if heads_or_tails == 1:
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-#     print("heads!")
-# else:
-#     print("tails!")
+print("Welcome to the Python Password Generator!")
 
+num_letters = int(input("How many letters would you like?\n"))
+num_numbers = int(input("How many numbers would you like?\n"))
+num_symbols = int(input("How many symbols would you like?\n"))
 
+password = ''
 
-game = """
+for letter in range(0, num_letters):
+    # random_letter = random.choice(letters)
+    # password += random_letter
+    password += random.choice(letters)
 
-█▀█ █▀█ █▀▀ █▄▀  
-█▀▄ █▄█ █▄▄ █░█  
+for number in range(0, num_numbers):
+    # random_number = random.choice(numbers)
+    # password += random_number
+    password += random.choice(numbers)
 
-█▀█ ▄▀█ █▀█ █▀▀ █▀█  
-█▀▀ █▀█ █▀▀ ██▄ █▀▄  
+for symbol in range(0, num_symbols):
+    # random_symbol = random.choice(symbols)
+    # password += random_symbol
+    password += random.choice(symbols)
 
-█▀ █▀▀ █ █▀ █▀ █▀█ █▀█ █▀
-▄█ █▄▄ █ ▄█ ▄█ █▄█ █▀▄ ▄█
-
-"""
-
-
-# Rock
-rock = """
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-"""
-
-# Paper
-paper = """
-     _______
----'    ____)____
-           ______)
-          _______)
-         _______)
----.__________)
-"""
-
-# Scissors
-scissors = """
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-"""
+password=''.join(random.sample(password,len(password)))
+print(password)
 
 
-print(game)
-print("Welcome to a game of Rock, Paper, Scissors!")
-computer = random.randint(1,3)
+password_list = []
+
+for letter in range(0, num_letters):
+    password_list.append(random.choice(letters))
+
+for number in range(0, num_numbers):
+    password_list.append(random.choice(numbers))
+
+for symbol in range(0, num_symbols):
+    password_list.append(random.choice(symbols))
+
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+
+password = ""
+
+for char in password_list:
+    password += char
+print(f'Your new password is: {password}')
 
 
-move = int(input("What is your move: (Rock = 1, Paper = 2, and Scissors = 3) "))
-if move == 1:
-    print(rock)
-elif move == 2:
-    print(paper)
-elif move == 3:
-    print(scissors)
+# Password Generator (Without Input)
 
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-if computer == 1:
-    print(rock)
-elif computer == 2:
-    print(paper)
-elif computer == 3:
-    print(scissors)
+print("Welcome to the Python Password Generator!")
+user_input = input('Would you like to generate a password?\nType "Y" for Yes or "N" for No: ').lower()
 
-#Game Logic:
+password = ''
 
-if move == computer:
-    print("It's a tie!")
-elif (move == 1 and computer == 3) or (move == 2 and computer == 1) or (move == 3 and computer == 2):
-    print("You win!")
+if user_input == 'y':
+
+    for letter in range(0, 5):
+        # random_letter = random.choice(letters)
+        # password += random_letter
+        password += random.choice(letters)
+
+    for number in range(0, 5):
+        # random_number = random.choice(numbers)
+        # password += random_number
+        password += random.choice(numbers)
+
+    for symbol in range(0, 5):
+        # random_symbol = random.choice(symbols)
+        # password += random_symbol
+        password += random.choice(symbols)
+
+    password=''.join(random.sample(password,len(password)))
+    print(password)
+
 else:
-    print("You lose!")
+    user_input == 'n'
+    print("Good day to you!")
 
 
-
-    
-
-
-
-
+# for number in range(1, 101):
+#     if number % 3 == 0 and number % 5 == 0:
+#         print('FizzBuzz')
+#     elif number % 3 == 0:
+#         print('Fizz')
+#     elif number % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(number)
