@@ -1,3 +1,5 @@
+# Daily challenge : Advanced Algorithm
+
 import random
 
 list_of_numbers = [random.randint(0, 10000) for _ in range(20000)]
