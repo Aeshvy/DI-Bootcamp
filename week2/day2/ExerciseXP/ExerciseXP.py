@@ -232,7 +232,7 @@ def quiz(data):
             print(f"Wrong! The correct answer is: {item['answer']}")
             wrong_answers.append((item["question"], user_answer, item["answer"]))
 
-        print(f"You got {correct_answers} out of {len(data)} correct!")
+        print(f"You got {correct_answers} questions out of {len(data)} correct!")
     
     # display_results(correct_answers, len(data) - correct_answers)
 
