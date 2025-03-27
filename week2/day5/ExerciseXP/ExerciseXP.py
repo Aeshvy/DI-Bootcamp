@@ -92,28 +92,75 @@ stairway.sing_me_a_song()
 
 # 🌟 Exercise 4 : Afternoon at the Zoo
 
-
 # Create a class called Zoo.
 # In this class create a method __init__ that takes one parameter: zoo_name.
 # It instantiates two attributes: animals (an empty list) and name (name of the zoo).
+
+from collections import defaultdict
 class Zoo():
     def __init__(self, zoo_name):
         self.zoo_name = zoo_name
         self.animals = []
-        pass
 
-zoo1 = Zoo("Alpha Zoo")
-zoo2 = Zoo("Omega Zoo")
-
-def add_animal(self, new_animal):
+# Create a method called add_animal that takes one parameter new_animal. This method adds the new_animal to the animals list as long as it isn’t already in the list.
+    def add_animal(self, new_animal):
         if new_animal not in self.animals:
             self.animals.append(new_animal)
             print(f"{new_animal} added to {self.zoo_name}.")
         else:
             print(f"{new_animal} is already in the zoo.")
-    
 
-# Create a method called add_animal that takes one parameter new_animal. This method adds the new_animal to the animals list as long as it isn’t already in the list.
 # Create a method called get_animals that prints all the animals of the zoo.
+    def get_animals(self):
+            if self.animals:
+                print(f'Animals in {self.zoo_name}:')
+                for animal in self.animals:
+                    print(animal)
+
 # Create a method called sell_animal that takes one parameter animal_sold. This method removes the animal from the list and of course the animal needs to exist in the list.
+    def sell_animal(self, animal_sold):
+            if animal_sold in self.animals:
+                self.animals.remove(animal_sold)
+                print(f"{animal_sold} has been sold from {self.zoo_name}.")
+
 # Create a method called sort_animals that sorts the animals alphabetically and groups them together based on their first letter.
+    def sort_animals(self):
+        sorted_animals = sorted(self.animals)
+        print(f"Animals in {self.zoo_name} sorted alphabetically:")
+        print(", ".join(sorted_animals))
+
+# Create a method called get_groups that prints the animal/animals inside each group.
+    def get_groups(self):
+        grouped_animals = defaultdict(list)
+        for animal in self.animals:
+            grouped_animals[animal[0].upper()].append(animal)
+
+        print(f"Animals grouped by their first letter in {self.zoo_name}:")
+        for letter, animals in grouped_animals.items():
+            print(f"{letter}: {', '.join(animals)}")
+
+
+zoo1 = Zoo("Alpha Zoo")
+zoo2 = Zoo("Omega Zoo")
+
+new_york_zoo = Zoo("New York Zoo")
+
+                                    # add_animal() Function
+new_york_zoo.add_animal("Giraffe")
+new_york_zoo.add_animal("Gorilla")
+new_york_zoo.add_animal("Elephant")
+new_york_zoo.add_animal("Emu")
+new_york_zoo.add_animal("Lion")
+new_york_zoo.add_animal("Leopard")
+new_york_zoo.add_animal("Zebra")
+
+
+new_york_zoo.get_animals()          # get_animals() Function
+
+new_york_zoo.sort_animals()         # sort_animals() Function
+
+new_york_zoo.get_groups()           # get_groups() Function
+
+new_york_zoo.sell_animal("Zebra")   # sell_animal() Function
+
+
