@@ -44,6 +44,11 @@ index_list = []
 def player_input(player_name):
     while True:
         x = input(f'{player_name.title()}, Enter Row (1-9): ')
+        
+        if x.lower() == 'q' or x.lower() == 'quit':
+            print("Exiting the game. Thanks for playing!")
+            quit()
+
         if x.isdigit():
             x = int(x)
             x -= 1
@@ -57,7 +62,6 @@ def player_input(player_name):
                 print('Please enter a number between 1 and 9.')
         else:
             print("Only numbers between 1 and 9!")
-
 
 
 # Check_win function checks if either player has won the game.
