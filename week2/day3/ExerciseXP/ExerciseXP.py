@@ -21,27 +21,18 @@ instructions:
 # For loop runs 9 times and fillts the 'spots' list with 9 ' ' (spaces).
 # indicating that all positions are empty on the start. 
 
-
-spots = []
-
-for i in range(9):
-  spots.append(' ')
+board = [' '] * 9
 
 
 # Display_board() function is responsible for printing the CURRENT stat of the Tic Tac Toe board to the console.
 # 'spots' list is used to display 'X' or 'O' in a 3x3 grid.
 
 
-def display_board(spots):
-  print(f"""
-
-   {spots[0]} | {spots[1]} | {spots[2]}
-  ---|---|---
-   {spots[3]} | {spots[4]} | {spots[5]}
-  ---|---|---
-   {spots[6]} | {spots[7]} | {spots[8]}
-
-  """)
+def display_board(board):
+    for i in range(0, 9, 3):
+        print(f" {board[i]} | {board[i+1]} | {board[i+2]} ")
+        if i < 6:
+            print("---|---|---")
 
 
 # The Player_input() function asks the player to input a number (1-9), which represents the position on the display board.
@@ -49,17 +40,24 @@ def display_board(spots):
 
 
 index_list = []
+
 def player_input(player_name):
-  while True:
-    x = int(input(f'{player_name.title()}, Enter Row: '))
-    x -= 1
-    if 0 <= x < 10:
-      if x in index_list:
-        print('This spot is blocked.')
-        continue
-      index_list.append(x)  
-      return x
-    print('Please Enter number between 1-9')
+    while True:
+        x = input(f'{player_name.title()}, Enter Row (1-9): ')
+        if x.isdigit():
+            x = int(x)
+            x -= 1
+            if 0 <= x < 9:
+                if x in index_list:
+                    print('This spot is blocked.')
+                    continue
+                index_list.append(x)
+                return x
+            else:
+                print('Please enter a number between 1 and 9.')
+        else:
+            print("Only numbers between 1 and 9!")
+
 
 
 # Check_win function checks if either player has won the game.
@@ -67,17 +65,18 @@ def player_input(player_name):
 # If a player wins, the quit() function is initiated.
 
 
-def check_win(spots, player_one, player_two):
+def check_win(board, player_one, player_two):
     winning_combinations = [
-        [0, 1, 2], [1, 4, 7], [0, 4, 8], [2, 5, 8],
-        [3, 4, 5], [2, 4, 6], [6, 7, 8], [0, 3, 6]
-    ]
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+    [0, 4, 8], [2, 4, 6]   
+]
 
     for combination in winning_combinations:
-        if spots[combination[0]] == spots[combination[1]] == spots[combination[2]] == 'X':
+        if board[combination[0]] == board[combination[1]] == board[combination[2]] == 'X':
             print(f'{player_one.title()} has won the game!')
             quit('Thank you for playing!')
-        elif spots[combination[0]] == spots[combination[1]] == spots[combination[2]] == 'O':
+        elif board[combination[0]] == board[combination[1]] == board[combination[2]] == 'O':
             print(f'{player_two.title()} has won the game!')
             quit('Thank you for playing!')
         
@@ -93,17 +92,17 @@ def play():
   print(Instructions)
   print(f"{player_one.title()}'s sign is - X")
   print(f"{player_two.title()}'s sign is - O")
-  display_board(spots)
+  display_board(board)
   for i in range(0,9):
     if i % 2 == 0:
       index = player_input(player_one)
-      spots[index] = 'X'
+      board[index] = 'X'
     else:
       index = player_input(player_two)
-      spots[index] = 'O'
+      board[index] = 'O'
 
-    display_board(spots)
-    check_win(spots, player_one, player_two)
+    display_board(board)
+    check_win(board, player_one, player_two)
   else:
     print("The game is a tie.")
     
