@@ -107,12 +107,17 @@ def show_magician():
     for magician in magician_names:
         print(magician)
 
-def make_great():
-    for magician in magician_names:
-        print(magician + " the Great")
+# def make_great():
+#     for magician in magician_names:
+#         print(magician + " the Great")
 
+def make_great(magician_names):
+     for i, name in enumerate(magician_names): 
+         magician_names[i] = f'{name} The Great'
+     return magician_names
+
+# make_great(magician_names)
 show_magician()
-make_great()
 
 # ---------------------------------------------------------------------------
 
