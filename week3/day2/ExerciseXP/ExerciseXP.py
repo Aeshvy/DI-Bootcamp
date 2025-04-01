@@ -196,6 +196,7 @@ my_family.family_presentation()
 class TheIncredibles(Family):
     def __init__(self, last_name):
         super().__init__(last_name)
+        self.members = []
 
     def use_power(self, name):
         for m in self.members:
@@ -228,4 +229,4 @@ incredibles.incredible_presentation()
 
 incredibles.use_power('Michael')
 incredibles.use_power('Sarah')
-# incredibles.use_power('Baby Jack')
+incredibles.use_power('Baby Jack')
