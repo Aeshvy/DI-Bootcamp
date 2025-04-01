@@ -153,39 +153,32 @@ class Family:
     def is_18(self, name):
         for m in self.members:
             if m.get('name') == name:
-                age = m.get('age', 0)
+                age = m.get('age')
+                if age >= 18:
+                    print(f"{name} is older than 18.")
+                else:
+                    print(f"{name} is not older than 18.")
+                return age >= 18
         return False
 
     def family_presentation(self):
-        print(f"Family Name: {self.last_name}")
-        for member in self.members:
-            # Print each member's details (name, age, gender, is_child)
-            print(f"Name: {member['name']}, Age: {member['age']}, Gender: {member['gender']}, Child: {member['is_child']}")
+        print(f"The {self.last_name} family members:")
+        for m in self.members:
+            print(f"Name: {m['name']}, Age: {m.get('age', 'Unknown')}, Is Child: {m['is_child']}")
 
-            
-
-# [
-#     {'name':'Michael','age':35,'gender':'Male','is_child':False},
-#     {'name':'Sarah','age':32,'gender':'Female','is_child':False}
-# ]
+# my_family = Family('Eshy')
 
 
-my_family = Family('Eshy')
+# my_family.members.append({'name':'Michael', 'age':35, 'gender':'Male', 'is_child':False})
+# my_family.members.append({'name':'Sarah', 'age':32, 'gender':'Female', 'is_child':False})
 
+# my_family.born(name='Alex', age=0, gender='Male')
 
-my_family.members.append({'name': 'Michael', 'age': 35, 'gender': 'Male', 'is_child': False})
-my_family.members.append({'name': 'Sarah', 'age': 32, 'gender': 'Female', 'is_child': False})
-my_family.members.append({'name': 'Alex', 'age': 18, 'gender': 'Male', 'is_child': False})
-my_family.members.append({'name': 'Jenny', 'age': 16, 'gender': 'Female', 'is_child': True})
+# my_family.is_18("Michael")
+# my_family.is_18("Alex")
 
+# my_family.family_presentation()
 
-my_family.born(name='Alex', age=0, gender='Male', is_child=True)
-
-
-print(my_family.is_18('Michael'))
-
-
-my_family.family_presentation()
 
 # ---------------------------------------------------------------------------
 
@@ -194,15 +187,45 @@ my_family.family_presentation()
 # Create a class called TheIncredibles. This class should inherit from the Family class:
 # This is no random family they are an incredible family, therefore the members attributes, will be a list of dictionaries containing the additional keys : power and incredible_name. (See Point 4)
 
-
 # Add a method called use_power, this method should print the power of a member only if they are over 18 years old. If not raise an exception (look up exceptions) which stated they are not over 18 years old.
-
 
 # Add a method called incredible_presentation which :
 
 # Print a sentence like “*Here is our powerful family **”
 # Prints the family’s last name and all the members’ details (ie. use the super() function, to call the family_presentation method)
-
 class TheIncredibles(Family):
-    def __init__(self):
-        pass
+    def __init__(self, last_name):
+        super().__init__(last_name)
+
+    def use_power(self, name):
+        for m in self.members:
+            if m.get('name') == name:
+                if m.get('age') >= 18:
+                    print(f"{name} is using their power: {m['power']}!")
+                else:
+                    raise Exception(f"{name} is not over 18 and cannot use their power!")
+                return
+        print(f"{name} is not a member of the family.")
+
+    def incredible_presentation(self):
+        print(f"Here is our powerful {self.last_name} family!")
+        for m in self.members:
+            print(f"Name: {m['name']}, Age: {m.get('age', 'Unknown')}, Power: {m['power']}, "
+                  f"Incredible Name: {m['incredible_name']}, Is Child: {m['is_child']}")
+
+incredibles = TheIncredibles("Incredibles")
+
+incredibles.members = [
+    {'name': 'Michael', 'age': 35, 'gender': 'Male', 'is_child': False, 'power': 'fly', 'incredible_name': 'MikeFly'},
+    {'name': 'Sarah', 'age': 32, 'gender': 'Female', 'is_child': False, 'power': 'read minds', 'incredible_name': 'SuperWoman'}
+]
+
+incredibles.incredible_presentation()
+
+incredibles.born(name="Baby Jack", age=0, gender="Male", power="Unknown Power", incredible_name="BigJack")
+
+incredibles.incredible_presentation()
+
+incredibles.use_power('Michael')
+incredibles.use_power('Sarah')
+incredibles.use_power('Baby Jack')
