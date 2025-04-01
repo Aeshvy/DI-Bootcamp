@@ -166,18 +166,18 @@ class Family:
         for m in self.members:
             print(f"Name: {m['name']}, Age: {m.get('age', 'Unknown')}, Is Child: {m['is_child']}")
 
-# my_family = Family('Eshy')
+my_family = Family('Eshy')
 
 
-# my_family.members.append({'name':'Michael', 'age':35, 'gender':'Male', 'is_child':False})
-# my_family.members.append({'name':'Sarah', 'age':32, 'gender':'Female', 'is_child':False})
+my_family.members.append({'name':'Michael', 'age':35, 'gender':'Male', 'is_child':False})
+my_family.members.append({'name':'Sarah', 'age':32, 'gender':'Female', 'is_child':False})
 
-# my_family.born(name='Alex', age=0, gender='Male')
+my_family.born(name='Alex', age=0, gender='Male')
 
-# my_family.is_18("Michael")
-# my_family.is_18("Alex")
+my_family.is_18("Michael")
+my_family.is_18("Alex")
 
-# my_family.family_presentation()
+my_family.family_presentation()
 
 
 # ---------------------------------------------------------------------------
@@ -228,4 +228,4 @@ incredibles.incredible_presentation()
 
 incredibles.use_power('Michael')
 incredibles.use_power('Sarah')
-incredibles.use_power('Baby Jack')
+# incredibles.use_power('Baby Jack')
