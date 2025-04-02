@@ -115,8 +115,8 @@ def minutes_lived(birthdate):
 
     print(f'You have lived: {minutes_lived} seconds.')
 
-# birthdate = input("Enter your birthdate (YYYY-MM-DD): ")
-# minutes_lived(birthdate)
+birthdate = input("Enter your birthdate (YYYY-MM-DD): ")
+minutes_lived(birthdate)
 
 # ---------------------------------------------------------------------------
 
