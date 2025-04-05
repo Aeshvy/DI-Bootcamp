@@ -1,8 +1,5 @@
 # Daily challenge : Text Analysis
 
-import string
-from collections import Counter
-
 # The goal of the exercise is to create a class that will help you analyze a specific text. A text can be just a simple string, like “Today, is a happy day” or it can be an external text file.
 
 # Part I
@@ -12,29 +9,28 @@ from collections import Counter
 # Hint: You need to manually copy-paste the text, straight into the code
 
 class Text:
-    def __init__(self, string):
-        self.string = string
+    def __init__(self, text):
+        self.text = text
 
     def most_frequent(self, word):
-        words = self.string.lwoer().split()
+        words = self.text.lwoer().split()
+        words = [w.strip('.,!?;:"()') for w in words]
         return words.count(word.lower())
 
     def most_common(self):
-        words = self.string.lower().split()
-        if not words:
-            return None
-        frequent = {}
+       words = self.text.lower().split()
+        word_frequency = {}
         for word in words:
-            frequent[word] = frequent.get(word, 0) + 1
-        return max(frequent, key=frequent.get)
+            word_frequency[word] = word_frequency.get(word, 0) + 1
+        
+        # Find the word with the highest frequency
+        most_common = max(word_frequency, key=word_frequency.get)
+        return most_common
 
     def most_unique(self):
-        wordlist = self.string.lower().split()
-        word_count = {}
-        for word in wordlist:
-            word_count[word] = word_count.get(word, 0) + 1
-        unique_words = [word for word, count in word_count.items() if count == 1]
-        return unique_words
+        words = self.text.lower().split()
+        unique_words = set(words)
+        return list(unique_words)
     
     @classmethod
     def from_file(cls, filename):
@@ -48,6 +44,8 @@ class Text:
 
 text = Text.from_file('the_stranger.txt')
 
+sample_text = Text("A good book would sometimes cost as much as a good house.")
+
 # print(text.most_frequent())
 print(text.most_common())
-print(text.most_unique())
+# print(text.most_unique())
