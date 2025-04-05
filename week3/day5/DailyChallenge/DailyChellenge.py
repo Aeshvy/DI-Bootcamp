@@ -1,5 +1,7 @@
 # Daily challenge : Text Analysis
 
+from collections import Counter
+
 # The goal of the exercise is to create a class that will help you analyze a specific text. A text can be just a simple string, like “Today, is a happy day” or it can be an external text file.
 
 # Part I
@@ -13,39 +15,34 @@ class Text:
         self.text = text
 
     def most_frequent(self, word):
-        words = self.text.lwoer().split()
-        words = [w.strip('.,!?;:"()') for w in words]
-        return words.count(word.lower())
+        words = self.text.lower().split()
+        count = words.count(word)
+        if count == 0:
+            return f"The word '{word}' was not found in the text."
+        return count
 
     def most_common(self):
-       words = self.text.lower().split()
-        word_frequency = {}
-        for word in words:
-            word_frequency[word] = word_frequency.get(word, 0) + 1
-        
-        # Find the word with the highest frequency
-        most_common = max(word_frequency, key=word_frequency.get)
-        return most_common
+        words = self.text.lower().split()
+        if not words:
+            return "The text is empty."
+        return Counter(words).most_common(1)[0]
 
     def most_unique(self):
-        words = self.text.lower().split()
-        unique_words = set(words)
-        return list(unique_words)
+        return list(set(self.text.split()))
     
     @classmethod
-    def from_file(cls, filename):
-        try:
-            with open(filename, "r") as file:
-                content = file.read()
-            return cls(content)
-        except FileNotFoundError:
-            print(f"File '{filename}' not found.")
-        return None
+    def from_file(cls, filename: str):
+        with open(filename, 'r') as file:
+            text = file.read()
+        return cls(text)
+
+
+sample_text = Text("Good book would sometimes cost as much as a good house.")
+print(sample_text.most_frequent("good"))
+print(sample_text.most_common())
+print(sample_text.most_unique())
 
 text = Text.from_file('the_stranger.txt')
-
-sample_text = Text("A good book would sometimes cost as much as a good house.")
-
-# print(text.most_frequent())
+print(text.most_frequent('good'))
 print(text.most_common())
 # print(text.most_unique())
