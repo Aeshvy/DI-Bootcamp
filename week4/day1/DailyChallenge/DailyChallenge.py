@@ -23,9 +23,10 @@
 
 import random
 
+# The Deck of cards class should NOT inherit from a Card class.
 class Card:
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-    values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+    values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 
     def __init__(self, suit, value):
         self.suit = suit
@@ -34,21 +35,29 @@ class Card:
     def __repr__(self):
         return f"{self.value} of {self.suit}"
 
+# The Deck class :
 class Deck:
     def __init__(self):
         self.cards = []
         self.shuffle()
 
+# should have a shuffle method which makes sure the deck of cards has all 52 cards and then rearranges them randomly.
     def shuffle(self):
         self.cards = [Card(suit, value) for suit in Card.suits for value in Card.values]
         random.shuffle(self.cards)
 
+# should have a method called deal which deals a single card from the deck. After a card is dealt, it should be removed from the deck.
     def deal(self):
-        return self.cards.pop() if self.cards else None
+        card = self.cards.pop() if self.cards else None
+        if card:
+            print(f"Dealing a card: {card}")
+        return card
 
     def remaining_cards(self):
-        return len(self.cards)
+        print("Remaining cards:", len(self.cards))
 
 deck = Deck()
-print("Dealing a card:", deck.deal())
-print("Cards left:", deck.remaining_cards())
+deck.deal()
+deck.deal()
+deck.deal()
+deck.remaining_cards()
