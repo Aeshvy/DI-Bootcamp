@@ -37,7 +37,7 @@
 -- ('Large Fan', 300),
 -- ('Fan', 80);
 
-
+INSERT INTO customers ()
 
 
 
