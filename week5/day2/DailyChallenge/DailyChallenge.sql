@@ -100,12 +100,92 @@ RETURNING actor_id, first_name, birthdate;
 
 ----------------------------------------------------------------------
 
--- ✅ DAILY CHALLENGE
+-- ✅ DAILY CHALLENGE --
 
 SELECT COUNT (*) FROM actors;
 INSERT INTO actors (first_name, last_name, birthdate, number_oscars)
 VALUES ('', '', '05/25/1995', 0);
 
 SELECT * FROM actors;
+
+----------------------------------------------------------------------
+
+CREATE TABLE movies(
+movie_id SERIAL,
+movie_title VARCHAR (50) NOT NULL,
+movie_story TEXT,
+actor_playing_id INTEGER,
+PRIMARY KEY (movie_id),
+FOREIGN KEY (actor_playing_id) REFERENCES actors (actor_id)
+);
+
+SELECT actors.first_name, actors.last_name, movies.movie_title
+FROM actors
+INNER JOIN movies
+ON actors.actor_id = movies.actor_playing_id;
+
+CREATE TABLE movies_2(
+movie_id SERIAL PRIMARY KEY,
+movie_title VARCHAR (50) NOT NULL,
+movie_story TEXT,
+actor_playing_id INTEGER
+);
+
+SELECT * FROM actors
+SELECT * FROM movies_2
+
+
+INSERT INTO movies_2 (movie_title, movie_story, actor_playing_id) VALUES
+( 'Good Will Hunting', 
+'Written by Affleck and Damon, the film follows 20-year-old South Boston janitor Will Hunting',
+(SELECT actor_id from actors WHERE first_name='Matt' AND last_name='Damon')),
+( 'Oceans Eleven', 
+'American heist film directed by Steven Soderbergh and written by Ted Griffin.', 
+(SELECT actor_id from actors WHERE first_name='Matt' AND last_name='Damon'));
+
+
+SELECT actors.first_name, actors.last_name, movies_2.movie_title
+FROM actors
+LEFT JOIN movies_2
+ON actors.actor_id = movies_2.actor_playing_id;
+
+-- Create another table producers, with a foreign key:
+-- the id of a movie. The producers table is linked to the movies table
+
+CREATE TABLE producers (
+producer_id SERIAL PRIMARY KEY,
+producer_name VARCHAR(50) NOT NULL,
+movie_id INTEGER,
+FOREIGN KEY (movie_id) REFERENCES movies (movie_id)
+);
+
+INSERT INTO producers (producer_name, movie_id)
+VALUES
+('John Smith', 1),
+('Julius Ceaser', 2);
+
+SELECT movies.movie_title, producers.producer_name
+FROM movies
+INNER JOIN producers
+ON movies.movie_id = producers.movie_id;
+
+-- Use INNER JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN 
+-- to join the table countries with the table actors, depending on the comparaison of their primary key
+-- Look at the results, and analyse them to understand the difference 
+-- between the types of PostgreSQL Joins
+
+CREATE TABLE countries (
+country_id SERIAL PRIMARY KEY,
+country_name VARCHAR(50) NOT NULL
+);
+
+SELECT actors.first_name, countries.country_name
+FROM actors
+LEFT JOIN countries
+ON actors.actor_id = countries.country_id;
+
+SELECT * FROM actors
+
+
 
 
