@@ -21,18 +21,25 @@
 -- birth_date DATE NOT NULL
 -- )
 
--- INSERT INTO students(first_namme, last_name, birth_date)
--- VALUES('Marc', 'Benichou', '02/11/1998'),
--- ('Yoan', 'Cohen', '03/12/2010'),
--- ('Lea', 'Benichou', '27/07/1987'),
--- ('Amelia', 'Dux', '07/04/1996'),
--- ('David', 'Grez', '14/06/2003'),
--- ('Omer', 'Simpson', '03/10/1980');
+-- INSERT INTO students(first_name, last_name, birth_date)
+-- VALUES('Marc', 'Benichou', '11/02/1998'),
+-- ('Yoan', 'Cohen', '12/03/2010'),
+-- ('Lea', 'Benichou', '07/27/1987'),
+-- ('Amelia', 'Dux', '04/07/1996'),
+-- ('David', 'Grez', '06/14/2003'),
+-- ('Omer', 'Simpson', '10/03/1980');
 
-COPY students
-FROM 'C:\Users\eshvo\Desktop\Fullstack\DI-Bootcamp\week5\day2\ExerciseXP\students.csv'
-DELIMITER ','
-CSV HEADER;
+-- COPY students(first_name, last_name, birth_date)
+-- FROM 'students.csv'
+-- DELIMITER ','
+-- CSV HEADER;
+
+-- SET DateStyle = 'ISO, DMY';
 
 -- SELECT * FROM students
+-- SELECT first_name, last_name FROM students
+-- SELECT * FROM students WHERE id = 2
+
+
+
 
