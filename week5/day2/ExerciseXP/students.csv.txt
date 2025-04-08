@@ -1,0 +1,12 @@
+id	first_name	last_name	birth_date							
+1	Marc	Benichou	11/02/1998							
+2	Yoan	Cohen	12/03/2010							
+3	Lea	Benichou	07/27/1987							
+4	Amelia	Dux	04/07/1996							
+5	David	Grez	06/14/2003							
+6	Omer	Simpson	10/03/1980							
+										
+										
+										
+										
+										
