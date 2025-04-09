@@ -41,9 +41,8 @@ SELECT customer.first_name, customer.last_name, payment.amount, payment.payment_
 SELECT * FROM film WHERE film_id NOT IN (SELECT film_id FROM inventory);
 
 -- Write a query to find which city is in which country.
-SELECT country.country, city.city WHERE country_id IN (SELECT country_id FROM country);
-select * from country
-select * from city
+SELECT city.city, country.country FROM city INNER JOIN country ON city.country_id = country.country_id;
 
 -- Bonus You want to be able to see how your sellers have been doing? Write a query to get the customer’s id, names (first and last), the amount and the date of payment ordered by the id of the staff member who sold them the dvd.
+SELECT customer.customer_id, customer.first_name, customer.last_name, payment.amount, payment.payment_date FROM customer INNER JOIN payment ON customer.customer_id = payment.customer_id INNER JOIN staff ON payment.staff_id = staff.staff_id ORDER BY staff.staff_id;
 
