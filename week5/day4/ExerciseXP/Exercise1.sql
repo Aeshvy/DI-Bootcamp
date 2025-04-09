@@ -1,55 +1,23 @@
--- Database: public
+🌟 Exercise 1 : Items and customers
+Instructions
+We will work on the public database that we created yesterday.
 
--- DROP DATABASE IF EXISTS public;
-
--- CREATE DATABASE public
---     WITH
---     OWNER = postgres
---     ENCODING = 'UTF8'
---     LC_COLLATE = 'en-US'
---     LC_CTYPE = 'en-US'
---     LOCALE_PROVIDER = 'libc'
---     TABLESPACE = pg_default
---     CONNECTION LIMIT = -1
---     IS_TEMPLATE = False;
-
+Use SQL to get the following from the database:
+All items, ordered by price (lowest to highest).
+Items with a price above 80 (80 included), ordered by price (highest to lowest).
+The first 3 customers in alphabetical order of the first name (A-Z) – exclude the primary key column from the results.
+All last names (no other columns!), in reverse alphabetical order (Z-A)
 ----------------------------------------------------------------------
--- 🌟 Exercise 1 : Items and customers
--- Create a database called public.
--- Add two tables:
--- items
--- customers.
+-- All items, ordered by price (lowest to highest).
+SELECT * FROM items ORDER BY price ASC;
 
-CREATE TABLE items(
-item_id SERIAL PRIMARY KEY,
-item_name VARCHAR (50) NOT NULL,
-price SMALLINT NOT NULL
-);
+-- Items with a price above 80 (80 included), ordered by price (highest to lowest).
+SELECT * FROM items WHERE price >= 80 ORDER BY price DESC;
 
-CREATE TABLE customers(
-customer_id SERIAL PRIMARY KEY,
-first_name VARCHAR (50) NOT NULL,
-last_name VARCHAR (100) NOT NULL
-);
+-- The first 3 customers in alphabetical order of the first name (A-Z) – exclude the primary key column from the results.
+SELECT first_name, last_name FROM customers ORDER BY first_name ASC LIMIT 3;
 
-INSERT INTO items (item_name, price)
-VALUES('Small Desk', 100),
-('Large Fan', 300),
-('Fan', 80);
+-- All last names (no other columns!), in reverse alphabetical order (Z-A).
+SELECT last_name FROM customers ORDER BY last_name DESC;
 
-INSERT INTO customers (first_name, last_name)
-VALUES ('Greg', 'Jones'),
-('Sandra', 'Jones'),
-('Scott', 'Scott'),
-('Trevor', 'Green'),
-('Melanie', 'Johnson');
 
-SELECT * FROM items;
-SELECT * FROM items WHERE price > 80;
-SELECT * FROM items WHERE price <= 300;
-
-SELECT * FROM customers WHERE last_name='Smith';
-SELECT * FROM customers WHERE last_name='Jones';
-SELECT * FROM customers WHERE first_name!='Scott';
-
-SELECT
