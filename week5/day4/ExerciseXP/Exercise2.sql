@@ -35,11 +35,15 @@ SELECT rental_rate FROM film ORDER BY rental_rate ASC LIMIT 10;
 SELECT rental_rate FROM film ORDER BY rental_rate ASC OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
 
 -- Write a query which will join the data in the customer table and the payment table. You want to get the first name and last name from the curstomer table, as well as the amount and the date of every payment made by a customer, ordered by their id (from 1 to…).
-
+SELECT customer.first_name, customer.last_name, payment.amount, payment.payment_date FROM customer INNER JOIN payment ON customer.customer_id = payment.customer_id ORDER BY customer.customer_id;
 
 -- You need to check your inventory. Write a query to get all the movies which are not in inventory.
+SELECT * FROM film WHERE film_id NOT IN (SELECT film_id FROM inventory);
 
 -- Write a query to find which city is in which country.
+SELECT country.country, city.city WHERE country_id IN (SELECT country_id FROM country);
+select * from country
+select * from city
 
 -- Bonus You want to be able to see how your sellers have been doing? Write a query to get the customer’s id, names (first and last), the amount and the date of payment ordered by the id of the staff member who sold them the dvd.
 
