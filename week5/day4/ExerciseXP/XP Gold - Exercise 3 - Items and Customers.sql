@@ -1,5 +1,6 @@
 -- Exercise 3 : Items and customers
 
+
 Part I
 
 -- Create a table named purchases. It should have 3 columns :
@@ -42,8 +43,35 @@ VALUES (
 );
 
 
+Part II
 
+-- Use SQL to get the following from the database:
+-- All purchases. Is this information useful to us?
+-- All purchases, joining with the customers table.
+-- Purchases of the customer with the ID equal to 5.
+-- Purchases for a large desk AND a small desk
 
-SELECT * FROM customers
-SELECT * FROM items
+SELECT SUM (quantity_purchased)
+FROM purchases;
+
 SELECT * FROM purchases
+INNER JOIN customers ON purchases.customer_id = customers.customer_id;
+
+SELECT 
+  purchases.id,
+  items.item_name,
+  purchases.quantity_purchased
+FROM purchases
+INNER JOIN items ON purchases.item_id = items.item_id
+WHERE purchases.customer_id = 5;
+
+SELECT 
+  purchases.id,
+  customers.first_name,
+  customers.last_name,
+  items.item_name,
+  purchases.quantity_purchased
+FROM purchases
+INNER JOIN customers ON purchases.customer_id = customers.customer_id
+INNER JOIN items ON purchases.item_id = items.item_id
+WHERE items.item_name IN ('Large Desk', 'Small Desk');
