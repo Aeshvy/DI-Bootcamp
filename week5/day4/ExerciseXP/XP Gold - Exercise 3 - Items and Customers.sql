@@ -1,6 +1,5 @@
 -- Exercise 3 : Items and customers
 
-
 Part I
 
 -- Create a table named purchases. It should have 3 columns :
@@ -8,6 +7,7 @@ Part I
 -- customer_id : this column references the table customers
 -- item_id : this column references the table items
 -- quantity_purchased : this column is the quantity of items purchased by a certain customer
+
 
 CREATE TABLE purchases (
 	id SERIAL PRIMARY KEY,
@@ -75,3 +75,17 @@ FROM purchases
 INNER JOIN customers ON purchases.customer_id = customers.customer_id
 INNER JOIN items ON purchases.item_id = items.item_id
 WHERE items.item_name IN ('Large Desk', 'Small Desk');
+
+
+-- Use SQL to show all the customers who have made a purchase. Show the following fields/columns:
+-- Customer first name
+-- Customer last name
+-- Item name
+
+SELECT 
+    c.first_name,
+    c.last_name,
+	item_name
+FROM customers c
+INNER JOIN purchases p ON c.customer_id = p.customer_id
+INNER JOIN items ON items.item_id = p.item_id;
