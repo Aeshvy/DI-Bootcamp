@@ -57,13 +57,9 @@ VALUES
 (5, 1, 'Outstanding!', 10, 'Truly a once in a lifetime masterpiece', '2019/05/25'),
 (3, 5, 'Magnifique', 7, "Plutôt peu inspirant, c'est le moins qu'on puisse dire.", '2025/04/19');
 
-Delete a film that has a review from the new_film table, what happens to the customer_review table?
+-- Delete a film that has a review from the new_film table, what happens to the customer_review table?
+DELETE FROM new_film
+WHERE id = 5
 
-
-SELECT * FROM customer_review
-SELECT * FROM new_film
-
-SELECT cr.title, cr.review_text, l.name AS language
-FROM customer_review cr
-JOIN language l ON cr.language_id = l.language_id;
+SELECT*FROM customer_review
 
