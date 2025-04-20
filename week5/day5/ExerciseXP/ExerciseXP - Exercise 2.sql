@@ -34,8 +34,7 @@ SELECT title, description, actor.first_name, actor.last_name
 FROM film
 INNER JOIN film_actor ON film.film_id = film_actor.film_id
 INNER JOIN actor ON film_actor.actor_id = actor.actor_id
-WHERE actor.first_name = 'Penelope'
-AND actor.last_name = 'Monroe'
+WHERE actor.first_name = 'Penelope' AND actor.last_name = 'Monroe'
 AND description ILIKE '%sumo wrestler%'
 
 -- The 2nd film : A short documentary (less than 1 hour long), rated “R”.
@@ -48,7 +47,25 @@ AND length < 60
 AND rating = 'R'
 
 -- The 3rd film : A film that his friend Matthew Mahan rented. He paid over $4.00 for the rental, and he returned it between the 28th of July and the 1st of August, 2005.
+SELECT title, customer.first_name, customer.last_name, rental_rate, return_date
+FROM film
+INNER JOIN inventory ON film.film_id = inventory.film_id
+INNER JOIN rental ON inventory.inventory_id = rental.inventory_id
+INNER JOIN customer ON rental.customer_id = customer.customer_id
+WHERE customer.first_name = 'Matthew'
+AND customer.last_name = 'Mahan'
+AND film.rental_rate > 4
+AND return_date BETWEEN '2005/7/28' AND '2005/8/1'
 
 
 -- The 4th film : His friend Matthew Mahan watched this film, as well. It had the word “boat” in the title or description, and it looked like it was a very expensive DVD to replace.
-
+SELECT title, description, customer.first_name, customer.last_name, replacement_cost
+FROM film
+INNER JOIN inventory ON film.film_id = inventory.film_id
+INNER JOIN rental ON inventory.inventory_id = rental.inventory_id
+INNER JOIN customer ON rental.customer_id = customer.customer_id
+WHERE customer.first_name = 'Matthew'
+AND customer.last_name = 'Mahan'
+AND (title ILIKE '%boat%' OR description ILIKE '%boat%')
+ORDER BY film.replacement_cost DESC
+LIMIT 1
