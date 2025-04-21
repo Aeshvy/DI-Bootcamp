@@ -23,7 +23,7 @@ print(placeholder)
 
 
 game_over = False
-correct_letters = []
+guessed_letters = []
 
 while not game_over:
     display = ""
@@ -32,12 +32,12 @@ while not game_over:
     for letter in chosen_word:
         if letter == guess:
             display += letter
+            guessed_letters.append(letter)
+        elif letter in guessed_letters:
+            display += letter
         else:
             display += "_"
-            
-    for letter in display:
-        display += correct_letters
-        print(correct_letters)
+
     
     print(display)
 
@@ -51,6 +51,9 @@ while not game_over:
 
 
 
-
+name = input("What is your name: ")
+age = int(input("How old are you: "))
+year = 2014 - age + 100
+print(name + ", you will be 100 years old in the year " + str(year))
 
 

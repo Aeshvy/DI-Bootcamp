@@ -31,6 +31,7 @@ class Farm:
     def get_animal_types(self):
         return sorted(self.animals.keys())
 
+    # Add another method to the Farm class called get_short_info. This method should return the following string: “McDonald’s farm has cows, goats and sheeps.”. The method should call the get_animal_types function to get a list of the animals.
     def get_short_info(self):
         animal_types = self.get_animal_types()
         animal_strings = [

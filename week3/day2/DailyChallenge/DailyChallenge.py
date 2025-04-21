@@ -2,13 +2,6 @@ import math
 
 # Daily Challenge : Pagination
 
-# Create a class to handle paginated content in a website. A pagination is used to divide long lists of content in a series of pages.
-
-# The Pagination class will accept 2 parameters:
-
-# items (default: None): It will contain a list of contents to paginate.
-# pageSize (default: 10): The amount of items to show in each page.
-
 class Pagination:
     def __init__(self, items=None, pageSize=10):
         self.items = items or []
@@ -43,17 +36,15 @@ class Pagination:
     def goToPage(self, pageNum):
         pageNum = int(pageNum)
         
-        # Ensure the page number is within the valid range
         if pageNum < 1:
-            self.currentPage = 1  # Set to first page if invalid
-            print("Out of bounds! Going to page 1:")
+            self.currentPage = 1
+            print("Out of bounds! Going to first page:")
         elif pageNum > self.totalPages:
             self.currentPage = self.totalPages
             print("Out of bounds! Going to the last page:")
         else:
-            self.currentPage = pageNum  # Set to the valid page number
+            self.currentPage = pageNum
         return self 
-
 
 
 alphabetList = list("abcdefghijklmnopqrstuvwxyz")
