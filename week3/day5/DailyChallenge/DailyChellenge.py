@@ -1,4 +1,4 @@
-# Daily challenge : Text Analysis
+# Daily challenge Text Analysis:
 
 from collections import Counter
 

@@ -1,6 +1,6 @@
 import math
 
-# Daily Challenge : Pagination
+# Daily Challenge Pagination:
 
 class Pagination:
     def __init__(self, items=None, pageSize=10):
