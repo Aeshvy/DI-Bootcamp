@@ -1,5 +1,6 @@
 from anagram_checker import AnagramChecker
 
+
 def is_valid_word_input(word):
     word = word.strip()
     if not word.isalpha() or ' ' in word:

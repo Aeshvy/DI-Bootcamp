@@ -1,5 +1,6 @@
 class AnagramChecker:
 
+
 # Create a new file called anagram_checker.py which contains a class called AnagramChecker.
 
 # The class should have the following methods:
