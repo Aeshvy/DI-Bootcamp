@@ -1,4 +1,4 @@
-# Daily challenge: Solve the Matrix
+# Daily challenge: Solve the Matrix:
 
 matrix = [
     ['7', 'i', 'i'],
