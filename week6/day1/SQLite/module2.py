@@ -1,5 +1,6 @@
 import psycopg2
 
+
 # 1. Connect to the database
 
 DB_NAME = "hollywood"
