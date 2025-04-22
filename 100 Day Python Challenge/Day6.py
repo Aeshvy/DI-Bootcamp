@@ -3,7 +3,7 @@ import random
 # 1. Randomly choose word from word_list, assign to a variable, and print.
 # 2. Ask the user to guess a letter, and assign to variablue (lowercase).
 # 3. Check if 'guess' letter is in one of the letters of 'chosen_word'
-#   print "Right" if it is.
+#   print "Right" if it is:
 
 word_list = ['dragon', 'cat', 'banana', 'apple', 'avatar', 'camel', 'aaalcor']
 chosen_word = ""
@@ -46,9 +46,6 @@ while not game_over:
         print("You win!")
     
     
-    
-
-
 
 
 name = input("What is your name: ")
