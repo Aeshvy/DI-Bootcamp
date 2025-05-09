@@ -54,12 +54,26 @@ FOREIGN KEY (language_id) REFERENCES language (language_id)
 -- Add 2 movie reviews. Make sure you link them to valid objects in the other tables.
 INSERT INTO customer_review (film_id, language_id, title, score, review_text, last_update)
 VALUES
-(5, 1, 'Outstanding!', 10, 'Truly a once in a lifetime masterpiece', '2019/05/25'),
-(3, 5, 'Magnifique', 7, "Plutôt peu inspirant, c'est le moins qu'on puisse dire.", '2025/04/19');
+(
+  (SELECT id FROM new_film WHERE name = 'Back to the Future'),
+  (SELECT language_id FROM language WHERE name = 'English'),
+  'Outstanding!',
+  10,
+  'Truly a once in a lifetime masterpiece',
+  '2019-05-25'
+),
+(
+  (SELECT id FROM new_film WHERE name = 'Amélie'),
+  (SELECT language_id FROM language WHERE name = 'French'),
+  'Magnifique',
+  7,
+  'Plutôt peu inspirant, c\'est le moins qu\'on puisse dire.',
+  '2025-04-19'
+);
 
 -- Delete a film that has a review from the new_film table, what happens to the customer_review table?
 DELETE FROM new_film
 WHERE id = 5
 
-SELECT*FROM customer_review
+SELECT * FROM customer_review
 
