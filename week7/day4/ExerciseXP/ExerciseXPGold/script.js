@@ -37,10 +37,21 @@ if (guestList[name]) {
 
 // Exercise 3 : Playing with numbers---------------------------------------
 let age = [20, 5, 12, 43, 98, 55];
+let ageSum = 0;
+let ageMax = age[0];
 
 // Requirements : Don’t use built-in Javascript methods to answer the following questions. You have to create the logic by yourself. Use simple for loops.
 
 // 1. Console.log the sum of all the numbers in the age array.
-for (let i = 0; i < age.length; i++) {}
+for (let i = 0; i < age.length; i++) {
+    ageSum += age[i];
+}
+console.log(ageSum)
 
 // 2. Console.log the highest age in the array.
+for (let i = 1; i < age.length; i++) {
+    if (age[i] > ageMax) {
+        ageMax = age[i];
+    }
+}
+console.log(ageMax)
