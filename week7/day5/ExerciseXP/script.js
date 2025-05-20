@@ -95,10 +95,10 @@ console.log(`The total bill is: $${myBill()}`);
 
 function changeEnough(itemPrice, amountOfChange) {
   const values = {
-    "quarter": 0.25,
-    "dime": 0.1,
-    "nickel": 0.05,
-    "penny": 0.01,
+    quarter: 0.25,
+    dime: 0.1,
+    nickel: 0.05,
+    penny: 0.01,
   };
 
   const coins = ["quarter", "dime", "nickel", "penny"];
@@ -110,4 +110,25 @@ function changeEnough(itemPrice, amountOfChange) {
   return changeEnough >= itemPrice;
 }
 
-console.log(changeEnough(4.25, [25, 20, 5, 0]));
+console.log(`Sufficient amout: ${changeEnough(4.25, [25, 20, 5, 0])}`);
+
+// Exercise 4 : Vacations Costs
+
+// Let’s create functions that calculate your vacation’s costs:
+
+// Define a function called hotelCost().
+// It should ask the user for the number of nights they would like to stay in the hotel.
+// If the user doesn’t answer or if the answer is not a number, ask again.
+// The hotel costs $140 per night. The function should return the total price of the hotel.
+
+function hotelCost() {
+  const pricePerNight = 140;
+  let nights;
+
+  while (true) {
+    nights = prompt("How many nights? ");
+    if (nights !== null) {
+      nights = nights.trim();
+    }
+  }
+}
