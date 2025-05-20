@@ -127,8 +127,49 @@ function hotelCost() {
 
   while (true) {
     nights = prompt("How many nights? ");
-    if (nights !== null) {
-      nights = nights.trim();
+
+    if (nights !== "" && !isNaN(nights) && Number(nights) > 0) {
+      return Number(nights) * pricePerNight;
+    } else {
+      alert("Invalid input! Please try again.");
     }
   }
 }
+
+const totalCost = hotelCost();
+console.log(`The total cost is: ${totalCost}`);
+
+// Define a function called planeRideCost().
+// It should ask the user for their destination.
+// If the user doesn’t answer or if the answer is not a string, ask again.
+// The function should return a different price depending on the location.
+// “London”: 183$
+// “Paris” : 220$
+// All other destination : 300$
+
+function planetRideCost() {
+  let destination;
+
+  while (true) {
+    destination = prompt('Please enter destination: ')
+  }
+}
+
+// FUNCTION planeRideCost():
+//     WHILE True:
+//         PROMPT user to enter their destination
+//         SET destination TO user's input
+
+//         IF destination is a valid string AND destination is not empty:
+//             BREAK the loop
+//         ELSE:
+//             DISPLAY "Please enter a valid destination."
+
+//     CONVERT destination TO lowercase (optional, for case-insensitive comparison)
+
+//     IF destination IS "london":
+//         RETURN 183
+//     ELSE IF destination IS "paris":
+//         RETURN 220
+//     ELSE:
+//         RETURN 300
