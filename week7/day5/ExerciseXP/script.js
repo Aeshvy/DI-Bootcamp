@@ -31,7 +31,6 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log("Total sum of numbers:", sum);
 
-
 // Exercise 2 : Shopping List
 
 // Create an array called shoppingList with the following items: “banana”, “orange”, and “apple”. It means that you have 1 banana, 1 orange and 1 apple in your cart.
@@ -46,45 +45,43 @@ console.log("Total sum of numbers:", sum);
 
 // Bonus: If the item is in stock, decrease the item’s stock by 1
 
-const stock = { 
-    "banana": 6, 
-    "apple": 0,
-    "pear": 12,
-    "orange": 32,
-    "blueberry":1
-}
+const stock = {
+  banana: 6,
+  apple: 0,
+  pear: 12,
+  orange: 32,
+  blueberry: 1,
+};
 
-const prices = {    
-    "banana": 4, 
-    "apple": 2, 
-    "pear": 1,
-    "orange": 1.5,
-    "blueberry":10
-}
+const prices = {
+  banana: 4,
+  apple: 2,
+  pear: 1,
+  orange: 1.5,
+  blueberry: 10,
+};
 
 const shoppingList = {
-    "banana": 1,
-    "orange": 1,
-    "apple": 1
-}
+  banana: 1,
+  orange: 1,
+  apple: 1,
+};
 
 function myBill() {
-    let total = 0;
+  let total = 0;
 
-    for (let item in shoppingList) {
-        let quantity = shoppingList[item];
+  for (let item in shoppingList) {
+    let quantity = shoppingList[item];
 
-        if (item in stock && stock[item] >= quantity && quantity > 0) {
-            total += prices[item] * quantity;
-            stock[item] -= quantity;
-        }
+    if (item in stock && stock[item] >= quantity && quantity > 0) {
+      total += prices[item] * quantity;
+      stock[item] -= quantity;
     }
-    return total;
+  }
+  return total;
 }
 
 console.log(`The total bill is: $${myBill()}`);
-
-
 
 // Exercise 3 : What’s in my wallet ?
 
@@ -97,10 +94,20 @@ console.log(`The total bill is: $${myBill()}`);
 // If the sum of the change is smaller than the item’s price (ie. it means that you cannot afford the item) the function should return false
 
 function changeEnough(itemPrice, amountOfChange) {
-    const values = {    
-    "quarter": 0.25, 
-    "dime": 0.10, 
+  const values = {
+    "quarter": 0.25,
+    "dime": 0.1,
     "nickel": 0.05,
     "penny": 0.01,
-    } 
+  };
+
+  const coins = ["quarter", "dime", "nickel", "penny"];
+
+  let changeEnough = 0;
+  for (let i = 0; i < amountOfChange.length; i++) {
+    changeEnough += amountOfChange[i] * values[coins[i]];
+  }
+  return changeEnough >= itemPrice;
 }
+
+console.log(changeEnough(4.25, [25, 20, 5, 0]));
