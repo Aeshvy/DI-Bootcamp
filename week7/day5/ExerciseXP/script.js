@@ -54,9 +54,6 @@ const stock = {
     "blueberry":1
 }
 
-console.log(stock);
-currentStock = {...stock};
-
 const prices = {    
     "banana": 4, 
     "apple": 2, 
@@ -66,9 +63,9 @@ const prices = {
 }
 
 const shoppingList = {
-    "banana": 3,
-    "orange": 3,
-    "apple": 3
+    "banana": 1,
+    "orange": 1,
+    "apple": 1
 }
 
 function myBill() {
@@ -79,17 +76,31 @@ function myBill() {
 
         if (item in stock && stock[item] >= quantity && quantity > 0) {
             total += prices[item] * quantity;
-            currentStock[item] -= quantity;
+            stock[item] -= quantity;
         }
     }
     return total;
 }
 
 console.log(`The total bill is: $${myBill()}`);
-console.log(currentStock);
+
 
 
 // Exercise 3 : What’s in my wallet ?
 
+// Create a function named changeEnough(itemPrice, amountOfChange) that receives two arguments :
+// an item price
+// and an array representing the amount of change in your pocket.
 
+// In the function, determine whether or not you can afford the item.
+// If the sum of the change is bigger or equal than the item’s price (ie. it means that you can afford the item), the function should return true
+// If the sum of the change is smaller than the item’s price (ie. it means that you cannot afford the item) the function should return false
 
+function changeEnough(itemPrice, amountOfChange) {
+    const values = {    
+    "quarter": 0.25, 
+    "dime": 0.10, 
+    "nickel": 0.05,
+    "penny": 0.01,
+    } 
+}
