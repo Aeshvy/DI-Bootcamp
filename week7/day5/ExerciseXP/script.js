@@ -178,73 +178,29 @@ console.log(`The cost for this destination is: ${totalRideCost}`);
 
 function rentalCarCost() {
   const carDailyRate = 40;
-
+  let numberOfDays;
+  
   while (true) {
-    let carRentalDuration = prompt("How many days would you like to rent the car? ");
-    if (carRentalDuration !== '' && isNaN(carRentalDuration));
+    let userInput = prompt("How many days would you like to rent the car? ");
+     numberOfDays = parseInt(userInput);
 
-    
-    
+    if (numberOfDays !== '' && !isNaN(numberOfDays) && numberOfDays > 0) {
+      break;
+    } else {
+      alert("Invalid input. Please try again.")
+    }    
   }
+
+  let carTotalCost = numberOfDays * carDailyRate;
+  if (numberOfDays > 10) {
+    const discount = totalCost * 0.05;
+    carTotalCost -= discount;
+    alert("You got a 5% discount!");
+  } else {
+    alert("You are not eligible for a discount.")
+  }
+  return carTotalCost;
 }
 
-// FUNCTION rentalCarCost()
-//     HINT: This function will calculate and return the total price for a car rental
-//     based on user input (number of days), with input validation and a discount rule.
-
-//     ----------------------------------------------------------
-//     Step 1: Set the constant rental price per day
-//     ----------------------------------------------------------
-//     DECLARE dailyRate = 40
-//     HINT: Each day of rental costs $40
-
-//     ----------------------------------------------------------
-//     Step 2: Declare variable to store number of days
-//     ----------------------------------------------------------
-//     DECLARE numberOfDays
-
-//     ----------------------------------------------------------
-//     Step 3: Start a loop to ask the user for input until it’s valid
-//     ----------------------------------------------------------
-//     LOOP until numberOfDays is a valid number AND greater than 0
-
-//         DISPLAY prompt asking:
-//             "How many days would you like to rent the car?"
-
-//         STORE the user's input in variable userInput
-
-//         TRY to CONVERT userInput to a number (e.g., using parseInt)
-
-//         IF conversion is successful AND the number is greater than 0 THEN
-//             SET numberOfDays = converted number
-//             BREAK the loop
-//         ELSE
-//             DISPLAY message:
-//                 "Invalid input. Please enter a positive whole number of days."
-
-//     END LOOP
-
-//     ----------------------------------------------------------
-//     Step 4: Calculate the base cost
-//     ----------------------------------------------------------
-//     SET totalCost = numberOfDays * dailyRate
-
-//     ----------------------------------------------------------
-//     Step 5: Check if the user qualifies for a 5% discount
-//     ----------------------------------------------------------
-//     IF numberOfDays > 10 THEN
-//         CALCULATE discountAmount = totalCost * 0.05
-//         SUBTRACT discountAmount from totalCost
-//         HINT: Apply the 5% discount
-
-//     END IF
-
-//     ----------------------------------------------------------
-//     Step 6: Display and return the result
-//     ----------------------------------------------------------
-//     DISPLAY message:
-//         "The total cost to rent the car for [numberOfDays] days is $" + totalCost
-
-//     RETURN totalCost
-
-// END FUNCTION
+const carTotalCost = rentalCarCost();
+console.log(`The total car rental cost is ${carTotalCost.toFixed(2)}`);
