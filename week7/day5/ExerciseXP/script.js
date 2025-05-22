@@ -220,7 +220,7 @@ function totalVacationCost() {
   console.log(`Total vacation cost is: ${vacationCost.toFixed(2)}`);
 }
 
-// totalVacationCost(); 
+// totalVacationCost();
 
 // 🌟 Exercise 5 : Users
 
@@ -230,15 +230,15 @@ function totalVacationCost() {
 // Delete the second <li> of the second <ul>.
 // Change the name of the first <li> of each <ul> to your name. (Hint : use a loop)
 
-let containerDiv = document.getElementById('container');
+let containerDiv = document.getElementById("container");
 console.log(containerDiv);
 
-let allUlElements = document.querySelectorAll('.list');
+let allUlElements = document.querySelectorAll(".list");
 let firstUl = allUlElements[0];
 firstUl.children[1].textContent = "Richard";
 
 let secondUl = allUlElements[1];
-secondUl.removeChild(secondUl.children[1])
+secondUl.removeChild(secondUl.children[1]);
 
 allUlElements.forEach((ul) => {
   ul.children[0].textContent = "Alex";
@@ -248,15 +248,12 @@ allUlElements.forEach((ul) => {
 // Add a class called student_list to both of the <ul>'s.
 // Add the classes university and attendance to the first <ul>.
 
-// allUlElements.forEach((ul) => {
-//   ul.classList.add('student_list');
-// });
-// console.log(allUlElements);
+allUlElements.forEach((ul) => {
+  ul.classList.add("student_list");
+});
 
-
-// firstUl.classList.add('university', 'attendance');
-// console.log(firstUl);
-
+firstUl.classList.add("university", "attendance");
+console.log(firstUl);
 
 // Using Javascript:
 // Add a “light blue” background color and some padding to the <div>.
@@ -264,4 +261,12 @@ allUlElements.forEach((ul) => {
 // Add a border to the <li> that contains the text node “Richard”. (the second <li> of the <ul>)
 // Change the font size of the whole body.
 
+containerDiv.style.backgroundColor = "lightblue";
+containerDiv.style.padding = '10px';
 
+let hideDan = secondUl.lastElementChild;
+hideDan.style.display = 'none';
+
+firstUl.children[1].style.border = '5px solid black';
+
+document.body.style.fontSize = '20px';
