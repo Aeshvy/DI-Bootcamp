@@ -1,4 +1,4 @@
-// Exercise 1 : Find the numbers divisible by 23
+// 🌟 Exercise 1 : Find the numbers divisible by 23
 
 // Create a function call displayNumbersDivisible() that takes no parameter.
 
@@ -31,7 +31,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log("Total sum of numbers:", sum);
 
-// Exercise 2 : Shopping List
+// 🌟 Exercise 2 : Shopping List
 
 // Create an array called shoppingList with the following items: “banana”, “orange”, and “apple”. It means that you have 1 banana, 1 orange and 1 apple in your cart.
 
@@ -83,7 +83,7 @@ function myBill() {
 
 console.log(`The total bill is: $${myBill()}`);
 
-// Exercise 3 : What’s in my wallet ?
+// 🌟 Exercise 3 : What’s in my wallet ?
 
 // Create a function named changeEnough(itemPrice, amountOfChange) that receives two arguments :
 // an item price
@@ -112,7 +112,7 @@ function changeEnough(itemPrice, amountOfChange) {
 
 console.log(`Sufficient amout: ${changeEnough(4.25, [25, 20, 5, 0])}`);
 
-// Exercise 4 : Vacations Costs
+// 🌟 Exercise 4 : Vacations Costs
 
 // Let’s create functions that calculate your vacation’s costs:
 
@@ -220,4 +220,48 @@ function totalVacationCost() {
   console.log(`Total vacation cost is: ${vacationCost.toFixed(2)}`);
 }
 
-// totalVacationCost();
+// totalVacationCost(); 
+
+// 🌟 Exercise 5 : Users
+
+// Using Javascript:
+// Retrieve the div and console.log it
+// Change the name “Pete” to “Richard”.
+// Delete the second <li> of the second <ul>.
+// Change the name of the first <li> of each <ul> to your name. (Hint : use a loop)
+
+let containerDiv = document.getElementById('container');
+console.log(containerDiv);
+
+let allUlElements = document.querySelectorAll('.list');
+let firstUl = allUlElements[0];
+firstUl.children[1].textContent = "Richard";
+
+let secondUl = allUlElements[1];
+secondUl.removeChild(secondUl.children[1])
+
+allUlElements.forEach((ul) => {
+  ul.children[0].textContent = "Alex";
+});
+
+// Using Javascript:
+// Add a class called student_list to both of the <ul>'s.
+// Add the classes university and attendance to the first <ul>.
+
+// allUlElements.forEach((ul) => {
+//   ul.classList.add('student_list');
+// });
+// console.log(allUlElements);
+
+
+// firstUl.classList.add('university', 'attendance');
+// console.log(firstUl);
+
+
+// Using Javascript:
+// Add a “light blue” background color and some padding to the <div>.
+// Do not display the <li> that contains the text node “Dan”. (the last <li> of the first <ul>)
+// Add a border to the <li> that contains the text node “Richard”. (the second <li> of the <ul>)
+// Change the font size of the whole body.
+
+
