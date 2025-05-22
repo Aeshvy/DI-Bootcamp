@@ -126,6 +126,9 @@ function hotelCost() {
 
   while (true) {
     let nights = prompt("How many nights? ");
+    if (nights === null) {
+      return null;
+    }
 
     if (nights !== "" && !isNaN(nights) && Number(nights) > 0) {
       return Number(nights) * pricePerNight;
@@ -149,6 +152,9 @@ function hotelCost() {
 function planeRideCost() {
   while (true) {
     let destination = prompt("Please enter destination: ");
+    if (destination === null) {
+      return null;
+    }
 
     if (destination !== "" && isNaN(destination)) {
       let chosenDestination = destination.toLowerCase();
@@ -181,8 +187,11 @@ function rentalCarCost() {
   let numberOfDays;
 
   while (true) {
-    let userInput = prompt("How many days would you like to rent the car? ");
-    numberOfDays = parseInt(userInput);
+    let cars = prompt("How many days would you like to rent the car? ");
+    if (cars === null) {
+      return null;
+    }
+    numberOfDays = parseInt(cars);
 
     if (numberOfDays !== "" && !isNaN(numberOfDays) && numberOfDays > 0) {
       break;
@@ -213,14 +222,23 @@ function rentalCarCost() {
 
 function totalVacationCost() {
   const hotelPrice = hotelCost();
+  if (hotelPrice === null) {
+    return; // exit totalVacationCost early
+  }
   const planePrice = planeRideCost();
+  if (planePrice === null) {
+    return;
+  }
   const carPrice = rentalCarCost();
+  if (carPrice === null) {
+    return;
+  }
 
   const vacationCost = hotelPrice + planePrice + carPrice;
   console.log(`Total vacation cost is: ${vacationCost.toFixed(2)}`);
 }
 
-// totalVacationCost();
+totalVacationCost();
 
 // 🌟 Exercise 5 : Users
 
@@ -301,8 +319,8 @@ ul.appendChild(newLi);
 let firstLi = ul.firstElementChild;
 let lastLi = ul.lastElementChild;
 
-console.log('First link text:', firstLi.textContent);
-console.log('Last link text:', lastLi.textContent);
+console.log("First link text:", firstLi.textContent);
+console.log("Last link text:", lastLi.textContent);
 
 // 🌟 Exercise 7 : My Book List
 
@@ -331,39 +349,41 @@ console.log('Last link text:', lastLi.textContent);
 
 let allBooks = [
   {
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkien',
-    image: 'https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg',
-    alreadyRead : true
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    image:
+      "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg",
+    alreadyRead: true,
   },
   {
     title: "Harry Potter and the Sorcerer's Stone",
     author: "J.K. Rowling",
-    image: "https://m.media-amazon.com/images/I/91wKDODkgWL._AC_UF1000,1000_QL80_DpWeblab_.jpg",
-    alreadyRead: false
-    }
-]
+    image:
+      "https://m.media-amazon.com/images/I/91wKDODkgWL._AC_UF1000,1000_QL80_DpWeblab_.jpg",
+    alreadyRead: false,
+  },
+];
 
 const bookSection = document.querySelector(".listBooks");
 
-allBooks.forEach(book => {
-    let bookDiv = document.createElement("div");
-    bookDiv.style.marginBottom = "20px";
+allBooks.forEach((book) => {
+  let bookDiv = document.createElement("div");
+  bookDiv.style.marginBottom = "20px";
 
-    let bookInfo = document.createElement("p");
-    bookInfo.textContent = `${book.title} written by ${book.author}`;
+  let bookInfo = document.createElement("p");
+  bookInfo.textContent = `${book.title} written by ${book.author}`;
 
-    if (book.alreadyRead) {
-        bookInfo.style.color = "red";
-    }
+  if (book.alreadyRead) {
+    bookInfo.style.color = "red";
+  }
 
-    let bookImg = document.createElement("img");
-    bookImg.src = book.image;
-    bookImg.alt = book.title;
-    bookImg.style.width = "100px";
+  let bookImg = document.createElement("img");
+  bookImg.src = book.image;
+  bookImg.alt = book.title;
+  bookImg.style.width = "100px";
 
-    bookDiv.appendChild(bookInfo);
-    bookDiv.appendChild(bookImg);
+  bookDiv.appendChild(bookInfo);
+  bookDiv.appendChild(bookImg);
 
-    bookSection.appendChild(bookDiv);
+  bookSection.appendChild(bookDiv);
 });
