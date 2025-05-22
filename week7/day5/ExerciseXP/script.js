@@ -262,11 +262,44 @@ console.log(firstUl);
 // Change the font size of the whole body.
 
 containerDiv.style.backgroundColor = "lightblue";
-containerDiv.style.padding = '10px';
+containerDiv.style.padding = "10px";
 
 let hideDan = secondUl.lastElementChild;
-hideDan.style.display = 'none';
+hideDan.style.display = "none";
 
-firstUl.children[1].style.border = '5px solid black';
+firstUl.children[1].style.border = "5px solid black";
 
-document.body.style.fontSize = '20px';
+document.body.style.fontSize = "20px";
+
+// 🌟 Exercise 6 : Change the navbar
+
+// Add the code above, to your HTML file
+
+// Using Javascript, in the <div>, change the value of the id attribute from navBar to socialNetworkNavigation, using the setAttribute method.
+
+// We are going to add a new <li> to the <ul>.
+// First, create a new <li> tag (use the createElement method).
+// Create a new text node with “Logout” as its specified text.
+// Append the text node to the newly created list node (<li>).
+// Finally, append this updated list node to the unordered list (<ul>), using the appendChild method.
+
+// Use the firstElementChild and the lastElementChild properties to retrieve the first and last <li> elements from their parent element (<ul>). Display the text of each link. (Hint: use the textContent property).
+
+let NavDiv = document.getElementById("navBar");
+
+NavDiv.setAttribute("id", "socialNetworkNavigation");
+
+let ul = document.querySelector("#socialNetworkNavigation ul");
+
+let newLi = document.createElement("li");
+
+let logoutText = document.createTextNode("Logout");
+newLi.appendChild(logoutText);
+
+ul.appendChild(newLi);
+
+let firstLi = ul.firstElementChild;
+let lastLi = ul.lastElementChild;
+
+console.log('First link text:', firstLi.textContent);
+console.log('Last link text:', lastLi.textContent);
