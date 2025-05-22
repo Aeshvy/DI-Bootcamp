@@ -123,10 +123,9 @@ console.log(`Sufficient amout: ${changeEnough(4.25, [25, 20, 5, 0])}`);
 
 function hotelCost() {
   const pricePerNight = 140;
-  let nights;
 
   while (true) {
-    nights = prompt("How many nights? ");
+    let nights = prompt("How many nights? ");
 
     if (nights !== "" && !isNaN(nights) && Number(nights) > 0) {
       return Number(nights) * pricePerNight;
@@ -148,28 +147,104 @@ console.log(`The total cost is: ${totalCost}`);
 // All other destination : 300$
 
 function planetRideCost() {
-  let destination;
-
   while (true) {
-    destination = prompt('Please enter destination: ')
+   let destination = prompt("Please enter destination: ");
+   
+   if (destination !== "" && isNaN(destination)) {
+    let chosenDestination = destination.toLowerCase();
+
+    if (chosenDestination === 'london') {
+      return 183;
+    } else if (chosenDestination === 'paris') {
+      return 220;
+    } else {
+      return 300;
+    }
+    } else {
+      alert("Please enter a valid destination");
+    }
   }
 }
 
-// FUNCTION planeRideCost():
-//     WHILE True:
-//         PROMPT user to enter their destination
-//         SET destination TO user's input
+const totalRideCost = planetRideCost();
+console.log(`The cost for this destination is: ${totalRideCost}`);
 
-//         IF destination is a valid string AND destination is not empty:
+// Define a function called rentalCarCost().
+// It should ask the user for the number of days they would like to rent the car.
+// If the user doesn’t answer or if the answer is not a number, ask again.
+// Calculate the cost to rent the car. The car costs $40 everyday.
+// If the user rents a car for more than 10 days, they get a 5% discount.
+// The function should return the total price of the car rental.
+
+function rentalCarCost() {
+  const carDailyRate = 40;
+
+  while (true) {
+    let carRentalDuration = prompt("How many days would you like to rent the car? ");
+    if (carRentalDuration !== '' && isNaN(carRentalDuration));
+
+    
+    
+  }
+}
+
+// FUNCTION rentalCarCost()
+//     HINT: This function will calculate and return the total price for a car rental
+//     based on user input (number of days), with input validation and a discount rule.
+
+//     ----------------------------------------------------------
+//     Step 1: Set the constant rental price per day
+//     ----------------------------------------------------------
+//     DECLARE dailyRate = 40
+//     HINT: Each day of rental costs $40
+
+//     ----------------------------------------------------------
+//     Step 2: Declare variable to store number of days
+//     ----------------------------------------------------------
+//     DECLARE numberOfDays
+
+//     ----------------------------------------------------------
+//     Step 3: Start a loop to ask the user for input until it’s valid
+//     ----------------------------------------------------------
+//     LOOP until numberOfDays is a valid number AND greater than 0
+
+//         DISPLAY prompt asking:
+//             "How many days would you like to rent the car?"
+
+//         STORE the user's input in variable userInput
+
+//         TRY to CONVERT userInput to a number (e.g., using parseInt)
+
+//         IF conversion is successful AND the number is greater than 0 THEN
+//             SET numberOfDays = converted number
 //             BREAK the loop
-//         ELSE:
-//             DISPLAY "Please enter a valid destination."
+//         ELSE
+//             DISPLAY message:
+//                 "Invalid input. Please enter a positive whole number of days."
 
-//     CONVERT destination TO lowercase (optional, for case-insensitive comparison)
+//     END LOOP
 
-//     IF destination IS "london":
-//         RETURN 183
-//     ELSE IF destination IS "paris":
-//         RETURN 220
-//     ELSE:
-//         RETURN 300
+//     ----------------------------------------------------------
+//     Step 4: Calculate the base cost
+//     ----------------------------------------------------------
+//     SET totalCost = numberOfDays * dailyRate
+
+//     ----------------------------------------------------------
+//     Step 5: Check if the user qualifies for a 5% discount
+//     ----------------------------------------------------------
+//     IF numberOfDays > 10 THEN
+//         CALCULATE discountAmount = totalCost * 0.05
+//         SUBTRACT discountAmount from totalCost
+//         HINT: Apply the 5% discount
+
+//     END IF
+
+//     ----------------------------------------------------------
+//     Step 6: Display and return the result
+//     ----------------------------------------------------------
+//     DISPLAY message:
+//         "The total cost to rent the car for [numberOfDays] days is $" + totalCost
+
+//     RETURN totalCost
+
+// END FUNCTION
