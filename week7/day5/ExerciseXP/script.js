@@ -135,8 +135,8 @@ function hotelCost() {
   }
 }
 
-const totalCost = hotelCost();
-console.log(`The total cost is: ${totalCost}`);
+// const totalCost = hotelCost();
+// console.log(`The total cost is: ${totalCost}`);
 
 // Define a function called planeRideCost().
 // It should ask the user for their destination.
@@ -146,28 +146,28 @@ console.log(`The total cost is: ${totalCost}`);
 // “Paris” : 220$
 // All other destination : 300$
 
-function planetRideCost() {
+function planeRideCost() {
   while (true) {
-   let destination = prompt("Please enter destination: ");
-   
-   if (destination !== "" && isNaN(destination)) {
-    let chosenDestination = destination.toLowerCase();
+    let destination = prompt("Please enter destination: ");
 
-    if (chosenDestination === 'london') {
-      return 183;
-    } else if (chosenDestination === 'paris') {
-      return 220;
-    } else {
-      return 300;
-    }
+    if (destination !== "" && isNaN(destination)) {
+      let chosenDestination = destination.toLowerCase();
+
+      if (chosenDestination === "london") {
+        return 183;
+      } else if (chosenDestination === "paris") {
+        return 220;
+      } else {
+        return 300;
+      }
     } else {
       alert("Please enter a valid destination");
     }
   }
 }
 
-const totalRideCost = planetRideCost();
-console.log(`The cost for this destination is: ${totalRideCost}`);
+// const totalRideCost = planeRideCost();
+// console.log(`The cost for this destination is: ${totalRideCost}`);
 
 // Define a function called rentalCarCost().
 // It should ask the user for the number of days they would like to rent the car.
@@ -179,28 +179,45 @@ console.log(`The cost for this destination is: ${totalRideCost}`);
 function rentalCarCost() {
   const carDailyRate = 40;
   let numberOfDays;
-  
+
   while (true) {
     let userInput = prompt("How many days would you like to rent the car? ");
-     numberOfDays = parseInt(userInput);
+    numberOfDays = parseInt(userInput);
 
-    if (numberOfDays !== '' && !isNaN(numberOfDays) && numberOfDays > 0) {
+    if (numberOfDays !== "" && !isNaN(numberOfDays) && numberOfDays > 0) {
       break;
     } else {
-      alert("Invalid input. Please try again.")
-    }    
+      alert("Invalid input. Please try again.");
+    }
   }
 
   let carTotalCost = numberOfDays * carDailyRate;
   if (numberOfDays > 10) {
-    const discount = totalCost * 0.05;
+    const discount = carTotalCost * 0.05;
     carTotalCost -= discount;
     alert("You got a 5% discount!");
   } else {
-    alert("You are not eligible for a discount.")
+    alert("You are not eligible for a discount.");
   }
   return carTotalCost;
 }
 
-const carTotalCost = rentalCarCost();
-console.log(`The total car rental cost is ${carTotalCost.toFixed(2)}`);
+// const carTotalCost = rentalCarCost();
+// console.log(`The total car rental cost is ${carTotalCost.toFixed(2)}`);
+
+// Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
+// Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
+// Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the function totalVacationCost().
+
+// Call the function totalVacationCost()
+
+function totalVacationCost() {
+  const hotelPrice = hotelCost();
+  const planePrice = planeRideCost();
+  const carPrice = rentalCarCost();
+
+  const vacationCost = hotelPrice + planePrice + carPrice;
+  console.log(`Total vacation cost is: ${vacationCost.toFixed(2)}`);
+}
+
+// totalVacationCost();
