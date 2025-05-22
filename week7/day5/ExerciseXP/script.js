@@ -303,3 +303,67 @@ let lastLi = ul.lastElementChild;
 
 console.log('First link text:', firstLi.textContent);
 console.log('Last link text:', lastLi.textContent);
+
+// 🌟 Exercise 7 : My Book List
+
+// Take a look at this link for help.
+
+// The point of this challenge is to display a list of two books on your browser.
+
+// In the body of the HTML page, create an empty section:
+// <section class="listBooks"></section>
+
+// In the js file, create an array called allBooks. This is an array of objects. Each object is a book that has 4 keys (ie. 4 properties) :
+// title,
+// author,
+// image : a url,
+// alreadyRead : which is a boolean (true or false).
+
+// Initiate the array with 2 books of your choice (ie. Add manually 2 books objects in the array)
+
+// Requirements : All the instructions below need to be coded in the js file:
+// Using the DOM, render each book inside a div (the div must be added to the <section> created in part 1).
+// For each book :
+// You have to display the book’s title and the book’s author.
+// Example: HarryPotter written by JKRolling.
+// The width of the image has to be set to 100px.
+// If the book is already read. Set the color of the book’s details to red.
+
+let allBooks = [
+  {
+    title: 'The Hobbit',
+    author: 'J.R.R. Tolkien',
+    image: 'https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg',
+    alreadyRead : true
+  },
+  {
+    title: "Harry Potter and the Sorcerer's Stone",
+    author: "J.K. Rowling",
+    image: "https://m.media-amazon.com/images/I/91wKDODkgWL._AC_UF1000,1000_QL80_DpWeblab_.jpg",
+    alreadyRead: false
+    }
+]
+
+const bookSection = document.querySelector(".listBooks");
+
+allBooks.forEach(book => {
+    let bookDiv = document.createElement("div");
+    bookDiv.style.marginBottom = "20px";
+
+    let bookInfo = document.createElement("p");
+    bookInfo.textContent = `${book.title} written by ${book.author}`;
+
+    if (book.alreadyRead) {
+        bookInfo.style.color = "red";
+    }
+
+    let bookImg = document.createElement("img");
+    bookImg.src = book.image;
+    bookImg.alt = book.title;
+    bookImg.style.width = "100px";
+
+    bookDiv.appendChild(bookInfo);
+    bookDiv.appendChild(bookImg);
+
+    bookSection.appendChild(bookDiv);
+});
