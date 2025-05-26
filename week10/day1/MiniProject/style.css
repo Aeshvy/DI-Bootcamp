@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #b3ffb3;
+}
+
+header {
+  background: #3cb371;
+  padding: 1rem;
+  text-align: center;
+  color: darkblue;
+}
+
+/* header.h1 {
+    text-align: left;
+} */
+
+#searchbox {
+  margin-top: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 300px;
+  border-radius: 5px;
+}
+
+#robotContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #30d5c8;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
+}
