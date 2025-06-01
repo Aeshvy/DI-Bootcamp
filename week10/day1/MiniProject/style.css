@@ -11,7 +11,6 @@ body {
 header {
   background: darkcyan;
   height: 7rem;
-  border: solid blue 5px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -24,32 +23,13 @@ header {
   font-style: normal;
 }
 
-header h1 {
-  border: solid yellow 5px;
-}
-
 #searchBox {
-  border: solid red 5px;
   margin: 3rem;
   padding: 1.5rem;
   font-size: 1rem;
   width: 700px;
   border-radius: 5px;
 }
-
-/* #searchBtn {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  background-color: #228B22;
-  color: white;
-  cursor: pointer;
-}
-
-#searchBtn:hover {
-  background-color: #1e7a1e;
-} */
 
 #robotContainer {
   display: flex;

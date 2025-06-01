@@ -1,3 +1,4 @@
+// assets
 const robots = [
   {
     id: 1,
