@@ -20,5 +20,5 @@ h3Hidden.addEventListener("click", function () {
 // Add a <button> to the HTML file, that when clicked on, should make the text of all the paragraphs, bold.
 const boldBtn = document.getElementById("boldButton");
 boldBtn.addEventListener("click", function () {
-    article.style.fontWeight = 'bold';
+  article.style.fontWeight = "bold";
 });
