@@ -91,3 +91,14 @@ function displayRobots(filteredRobots) {
 
 displayRobots(robots);
 
+searchBox.addEventListener("input", (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filtered = robots.filter(
+    (robot) =>
+      robot.name.toLowerCase().includes(searchTerm) ||
+      robot.email.toLowerCase().includes(searchTerm)
+  );
+  displayRobots(filtered);
+});
+
+console.log(document.getElementById("searchBox"));

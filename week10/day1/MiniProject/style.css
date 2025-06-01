@@ -1,36 +1,65 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #b3ffb3;
+  background: url(https://www.graphicpear.com/wp-content/uploads/2022/10/Abstract-Geometric-3D-Seamless-Pattern-.png);
+  background-size: cover;
+  background-attachment: fixed; /* keeps it in place while scrolling */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {
-  background: #3cb371;
-  padding: 1rem;
-  text-align: center;
+  background: darkcyan;
+  height: 7rem;
+  border: solid blue 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+  text-align: left;
   color: darkblue;
+  font-size: 2rem;
+  font-family: "Jolly Lodger", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* header.h1 {
-    text-align: left;
-} */
+header h1 {
+  border: solid yellow 5px;
+}
 
-#searchbox {
-  margin-top: 10px;
-  padding: 0.5rem;
+#searchBox {
+  border: solid red 5px;
+  margin: 3rem;
+  padding: 1.5rem;
   font-size: 1rem;
-  width: 300px;
+  width: 700px;
   border-radius: 5px;
 }
+
+/* #searchBtn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #228B22;
+  color: white;
+  cursor: pointer;
+}
+
+#searchBtn:hover {
+  background-color: #1e7a1e;
+} */
 
 #robotContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 1rem;
 }
 
 .card {
-  background: #30d5c8;
+  background: url(https://media.istockphoto.com/id/487231146/vector/abstract-teal-geometric-background-vector.jpg?s=612x612&w=0&k=20&c=tLNW1XRsor3TKry7jlH4eiFY8_xVku5NlMJiWX4p_mA=);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   margin: 1rem;
@@ -38,4 +67,31 @@ header {
   width: 300px;
   text-align: center;
   transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  opacity: 99%;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 50%;
+  background: brown;
+}
+
+.card h2 {
+  color: darkred;
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.card p {
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+  border-radius: 2px;
+  background: brown;
 }
