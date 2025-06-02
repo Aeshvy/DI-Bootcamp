@@ -73,17 +73,24 @@ var allBoldItems;
 function getBoldItems() {
   allBoldItems = document.querySelectorAll("#paragraph strong");
 }
-getBoldItems()
+getBoldItems();
 console.log(allBoldItems);
 // Create a function called highlight() that changes the color of all the bold text to blue.
 function highlight() {
-    allBoldItems.forEach(function(item) {
-        item.style.color = 'red';
-    });
+  allBoldItems.forEach(function (item) {
+    item.style.color = "red";
+  });
 }
-highlight()
-
-
+highlight();
 // Create a function called returnItemsToDefault() that changes the color of all the bold text back to black.
+function returnItemsToDefault() {
+  allBoldItems.forEach(function (item) {
+    item.style.color = "black";
+  });
+}
+// returnItemsToDefault();
 
 // Call the function highlight() on mouseover (ie. when the mouse pointer is moved onto the paragraph), and the function returnItemsToDefault() on mouseout (ie. when the mouse pointer is moved out of the paragraph).
+var paragraph = document.getElementById("paragraph");
+paragraph.addEventListener("mouseover", highlight);
+paragraph.addEventListener("mouseout", returnItemsToDefault);
