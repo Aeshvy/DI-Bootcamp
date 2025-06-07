@@ -80,8 +80,8 @@ alert(`outside of the if block ${a}`); // a = 2
 // Instructions
 // Using the code below:
 
-function winBattle(){
-    return true;
+function winBattle() {
+  return true;
 }
 
 // Transform the winBattle() function to an arrow function.
@@ -96,8 +96,8 @@ console.log(experiencePoints);
 // Instructions
 // Write a JavaScript arrow function that checks whether the value of the argument passed, is a string or not. The function should return true or false
 // Check out the example below to see the expected output
-const isString = (value) => typeof value === 'string';
-console.log(isString("hello")); 
+const isString = (value) => typeof value === "string";
+console.log(isString("hello"));
 
 // 🌟 Exercise 4 : Find the sum
 // Instructions
@@ -105,4 +105,102 @@ console.log(isString("hello"));
 const sum = (a, b) => a + b;
 console.log(sum(5, 10));
 
+// 🌟 Exercise 5 : Kg and grams
+// Instructions
+// Create a function that receives a weight in kilograms and returns it in grams. (Hint: 1 kg is 1000gr)
+// First, use function declaration and invoke it.
+function KilosToGrams(kg) {
+  return kg * 1000;
+}
+console.log(KilosToGrams(5));
 
+// Then, use function expression and invoke it.
+const kilosToGrams = function (kg) {
+  return kg * 1000;
+};
+console.log(kilosToGrams(5));
+
+// Write in a one line comment, the difference between function declaration and function expression.
+// functions are hoisted (moved) to the top of their scope, while expressions are not.
+
+// Finally, use a one line arrow function and invoke it.
+const kilosToGrams2 = (kg) => kg * 1000;
+console.log(kilosToGrams2(5));
+
+// 🌟 Exercise 6 : Fortune teller
+// Instructions
+// Create a self invoking function that takes 4 arguments: number of children, partner’s name, geographic location, job title.
+// The function should display in the DOM a sentence like "You will be a <job title> in <geographic location>, and married to <partner's name> with <number of children> kids."
+(function (children, partner, location, job) {
+  const message = `You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.`;
+  document.body.innerHTML = `<p>${message}</p>`;
+})(3, "Alice", "New York", "Software Engineer");
+
+// 🌟 Exercise 7 : Welcome
+// Instructions
+// John has just signed in to your website and you want to welcome him.
+// Create a Navbar in your HTML file.
+// In your js file, create a self invoking funtion that takes 1 argument: the name of the user that just signed in.
+// The function should add a div in the nabvar, displaying the name of the user and his profile picture.
+(function (username) {
+  const navbar = document.querySelector(".navbar");
+  const userDiv = document.createElement("div");
+  userDiv.innerHTML = `<p>Welcome, ${username}!</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd5avdba8EiOZH8lmV3XshrXx7dKRZvhx-A&s">`;
+  navbar.appendChild(userDiv);
+})("John Doe");
+
+// 🌟 Exercise 8 : Juice Bar
+// Instructions
+// You will use nested functions, to open a new juice bar.
+
+// Part I:
+// The outer function named makeJuice receives 1 argument: the size of the beverage the client wants - small, medium or large.
+// The inner function named addIngredients receives 3 ingredients, and displays on the DOM a sentence like The client wants a <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
+// Invoke the inner function ONCE inside the outer function. Then invoke the outer function in the global scope.
+function makeJuice(size) {
+  function addIngredients(ingredient1, ingredient2, ingredient3) {
+    const message = `The client wants a ${size} juice, containing ${ingredient1}, ${ingredient2}, ${ingredient3}.`;
+
+    // Display it on the DOM
+    const output = document.createElement("p");
+    output.textContent = message;
+    document.body.appendChild(output);
+  }
+
+  addIngredients("apple", "carrot", "ginger");
+}
+
+makeJuice("large");
+
+// Part II:
+// In the makeJuice function, create an empty array named ingredients.
+
+// The addIngredients function should now receive 3 ingredients, and push them into the ingredients array.
+
+// Create a new inner function named displayJuice that displays on the DOM a sentence like The client wants a <size drink> juice, containing <first ingredient>, <second ingredient>, <third ingredient>".
+
+// The client wants 6 ingredients in his juice, therefore, invoke the addIngredients function TWICE. Then invoke once the displayJuice function. Finally, invoke the makeJuice function in the global scope.
+function makeJuice(size) {
+  const ingredients = [];
+
+  function addIngredients(ingredient1, ingredient2, ingredient3) {
+    ingredients.push(ingredient1, ingredient2, ingredient3);
+  }
+
+  function displayJuice() {
+    const message = `The client wants a ${size} juice, containing ${ingredients.join(
+      ", "
+    )}.`;
+
+    const output = document.createElement("p");
+    output.textContent = message;
+    document.body.appendChild(output);
+  }
+
+  addIngredients("apple", "carrot", "ginger");
+  addIngredients("banana", "lemon", "mint");
+
+  displayJuice();
+}
+
+makeJuice("medium");
