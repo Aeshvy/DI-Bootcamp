@@ -9,19 +9,18 @@
 word = input('pick a word: ')
 
 dictionary = {}
-    # iterate through characters of string 'word'
-for index, letter in enumerate(word):                                   
+# iterate through characters of string 'word'
+for index, letter in enumerate(word):
     # This checks if the character (letter) is already a key in the dictionary
     if letter in dictionary:
-    # If character (letter) is a key in the dictionary, move to next step
+        # If character (letter) is a key in the dictionary, move to next step
         dictionary[letter].append(index)
-    # This line is executed when the letter is not found in the dictionary. It creates a new key-value pair in {dictionary}    
+    # This line is executed when the letter is not found in the dictionary. It creates a new key-value pair in {dictionary}
     else:
         dictionary[letter] = [index]
 
 print(dictionary)
 
-                                                                        #
 # 🌟Challenge 2
 # Create a program that prints a list of the items you can afford in the store with the money you have in your wallet.
 # Sort the list in alphabetical order.
@@ -29,7 +28,6 @@ print(dictionary)
 
 wallet = int(input('What is your budget? '))
 
-    
 
 def affordable_items():
 
@@ -39,25 +37,28 @@ def affordable_items():
         "Laptop": "$5,000",
         "PC": "$1200"
     }
-    
+
     affordable = []
-   
-    for item, price in items_purchase.items():                          # Checks each item in the store and see if the user can afford it
-        
-        item_price = float(price.replace('$', '').replace(',', ''))     # Convert the price by replacing '$' with ',' from dictionary price
-        
-        
-        if wallet >= item_price:                                        # If User can afford the item, .append (add) to the affordable list
+
+    # Checks each item in the store and see if the user can afford it
+    for item, price in items_purchase.items():
+
+        # Convert the price by replacing '$' with ',' from dictionary price
+        item_price = float(price.replace('$', '').replace(',', ''))
+
+        # If User can afford the item, .append (add) to the affordable list
+        if wallet >= item_price:
             affordable.append(item)
-    
-    affordable.sort()                                                   # Sort the affordable items alphabetically
-    
+
+    # Sort the affordable items alphabetically
+    affordable.sort()
+
     if affordable:
-        print("Items you can afford:", ', '.join(affordable))           # Print the result (affordable), otherwise, print "Nothing"
+        # Print the result (affordable), otherwise, print "Nothing"
+        print("Items you can afford:", ', '.join(affordable))
     else:
         print("Nothing")
 
 
-affordable_items()                                                      # Calls the function to run the program
-
-
+# Calls the function to run the program
+affordable_items()

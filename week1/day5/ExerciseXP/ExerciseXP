@@ -1,14 +1,13 @@
 # 🌟 Exercise 1 : Convert lists into dictionaries
-
 # Convert the two following lists, into dictionaries.
 # Hint: Use the zip method
 
-# keys = ['Ten', 'Twenty', 'Thirty']
-# values = [10, 20, 30]
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
 
-# dictionaries = zip(keys, values) # zip method for 2 lists
+dictionaries = zip(keys, values) # zip method for 2 lists
 
-# print(list(dictionaries))        # converting zip into a list and printing
+print(list(dictionaries))        # converting zip into a list and printing
 
 
 # ---------------------------------------------------------------------------
