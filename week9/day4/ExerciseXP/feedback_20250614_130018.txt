@@ -1,0 +1,21 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/9bc6c311b7ec8db6ccd40b9f23a509a6e862fd6a/week9/day4/ExerciseXP/index.html
+suggestions for improvement:
+- Exercise 1:  The solution correctly iterates through the array and logs the output as requested. However, it could be improved by using a more concise loop structure like `forEach`.
+- Exercise 1: The 'Violet' check is efficient and correctly uses `includes`.
+- Exercise 2: The solution effectively uses the ternary operator for ordinal number generation and correctly displays the colors.  However, it could be made more readable by extracting the ordinal selection logic into a separate function.
+- Exercise 3:  The analysis of the code snippets is accurate. However, adding explanations for each line within the comments would enhance understanding.
+- Exercise 4: The solutions for parts 1 and 2 are correct and effectively use `map` and `filter`. The bonus part (chaining filter and map) is also correctly implemented.  The code is clear, but it could be slightly improved by adding more descriptive variable names.
+- Exercise 5: The solution correctly uses `reduce` to create the string.  The code is concise and readable.
+- Exercise 6: The solution correctly uses `filter` to get passing students and then uses a `forEach` to print congratulations. The implementation is good, but again, more descriptive variable names would enhance readability.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/9bc6c311b7ec8db6ccd40b9f23a509a6e862fd6a/week9/day4/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 1, the index starts from 0, but the instructions ask for it to start from 1.  A simple `index + 1` adjustment would fix this.
+- Exercise 2's ordinal array handling could be improved for better readability and extensibility. Consider a more robust approach for handling ordinal suffixes beyond the first three.
+- Exercise 3 is excellent; the analysis and predictions are perfectly accurate. No changes needed.
+- Exercise 4, parts 1, 2, and the bonus, are all implemented correctly and efficiently using `map()` and `filter()` as requested.
+- Exercise 5 uses `reduce()` effectively to concatenate the strings.  The `.trim()` is a good addition for removing leading/trailing whitespace.
+- Exercise 6 correctly uses `filter()` and `forEach()` to achieve the desired result. The code is clear and concise.
+Correctness: 95%
+-----
