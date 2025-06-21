@@ -1,0 +1,22 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/d07011ad762e1512031b6d3627fc16c48aac9dff/week12/day1/MiniProject/index.html
+suggestions for improvement:
+- Implement the `script.js` file to fetch data from the provided Star Wars API (`https://www.swapi.tech/`), handle loading and error states, and display character information (name, height, gender, birth year, and homeworld) in the `character-info` div.
+- Improve error handling to provide more specific error messages based on the type of error encountered during the API call (e.g., network error, API error).
+- Add better styling using CSS to improve the visual appeal of the application and make it more user-friendly.
+- Consider adding input validation or preventing multiple API requests while a request is already in progress.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/d07011ad762e1512031b6d3627fc16c48aac9dff/week12/day1/MiniProject/script.js
+suggestions for improvement:
+- Add error handling for the case where the homeworld API call fails.
+- Improve the loading indicator by using a more visually appealing loading animation (as suggested in the instructions).
+- Consider adding input validation to prevent unexpected behavior if the API response structure changes unexpectedly.
+- Add more robust error handling to gracefully handle various HTTP error codes (not just `!response.ok`).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/d07011ad762e1512031b6d3627fc16c48aac9dff/week12/day1/MiniProject/style.css
+suggestions for improvement:
+- The provided code is only CSS.  It does not contain any JavaScript code to fetch data from the Star Wars API, display it using AJAX, handle loading states, or manage errors as instructed in the project description.  The CSS is well-structured and readable.
+- Add JavaScript functionality to fetch data from `https://www.swapi.tech/`, handle loading and error states, and display the character information (name, height, gender, birth year, homeworld) in the DOM using async/await and the Fetch API.
+Correctness: 0%
+-----
