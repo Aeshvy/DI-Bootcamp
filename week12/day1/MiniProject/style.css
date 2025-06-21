@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://png.pngtree.com/background/20221128/original/pngtree-abstract-background-with-rectangular-retro-computer-stars-for-template-or-design-picture-image_1967025.jpg');
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.logo {
+    font-size: 100px;
+    font-family: 'Star Wars', sans-serif;;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #000;
+    margin-bottom: 40px;
+}
+
+.info-box {
+    border: 2px solid #ffe81f;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.info-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffe81f;
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#find-button {
+    background-color: #ffe81f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#loading {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #ffe81f;
+}
+
+#error-message {
+    color: red;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
