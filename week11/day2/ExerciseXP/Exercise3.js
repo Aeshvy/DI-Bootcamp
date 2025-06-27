@@ -27,4 +27,7 @@ const marioGame = {
 // Use your web inspector to add a breakpoint. Check the values of the JSON object in the debugger.
 
 const marioGameJSON = JSON.stringify(marioGame, null, 2);
+let marioGameParsed = JSON.parse(marioGameJSON);
+
 console.log(marioGameJSON);
+console.log(marioGameParsed);

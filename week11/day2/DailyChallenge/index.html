@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Create a form with two fields (name, last name) and a submit button.
+When you click the Send button, retrieve the data from the inputs, and append it on the DOM as a JSON string.
+The output should be: -->
+
+    <form id="myForm" action="index.html" method="get">
+        <label for="name"></label><br>
+        <input type="text" name="name" id="name" placeholder="Name">
+
+        <label for="lastName"></label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+
+        <input type="submit" value="Send">
+    </form>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
