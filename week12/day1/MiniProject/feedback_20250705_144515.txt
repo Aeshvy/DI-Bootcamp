@@ -1,0 +1,24 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week12/day1/MiniProject/index.html
+suggestions for improvement:
+- Implement error handling for the homeworld API call.  The current code only handles errors from the character API call.
+- Add input validation to prevent unexpected behavior if the API returns unexpected data.
+- Improve the loading animation: Consider using a more visually appealing loading indicator than just a spinning icon.
+- Optimize the code for better performance, particularly when dealing with large datasets or multiple API calls. Currently, it only fetches one character at a time.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week12/day1/MiniProject/script.js
+suggestions for improvement:
+- Add error handling for the case where the `homeworld` URL from the character data is invalid or unavailable.  The current error handling only catches issues with the initial character fetch and the homeworld fetch separately; a more robust solution would be needed for a production environment.
+- Consider using a loading indicator that is more visually appealing and integrates better with the overall design of the web application. The current placeholder is functional but lacks visual polish.
+- Improve the efficiency of the homeworld data fetch.  Currently, a separate `fetch` call is made for each homeworld. If performance is a significant concern, consider strategies like caching fetched homeworlds to avoid redundant requests. If this application were to scale to fetching many characters concurrently, this would become a major performance bottleneck.
+- Add more descriptive error messages to the user, providing more context than simply 'Character not found' or 'Homeworld fetch failed'. For example, include the character ID or URL to help the user understand why the error occurred.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week12/day1/MiniProject/style.css
+suggestions for improvement:
+- The provided code is only CSS.  It doesn't contain any JavaScript code to fetch data from the Star Wars API using the Fetch API or async/await, as required by the chapter content.  It only styles a webpage. The core functionality described in the chapter is missing.
+- Add JavaScript code to fetch data from `https://www.swapi.tech/` using `async/await` and the Fetch API.
+- Implement functions to handle DOM manipulation, data display, loading messages, and error handling as specified in the instructions.
+- Use the provided FontAwesome link to include loading animation icons.
+Correctness: 0%
+-----
