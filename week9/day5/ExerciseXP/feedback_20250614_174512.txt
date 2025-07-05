@@ -1,0 +1,15 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/599ab2b794ecacbfbd494f43913f6e509f8cabf5/week9/day5/ExerciseXP/index.html
+suggestions for improvement:
+- Exercise 2: Add explicit return statement for clarity.  The instructions imply a return, but it's not explicitly coded.
+- Exercise 3:  The solution uses Object.entries which is efficient but might not be covered in the introductory class on objects.  Consider a solution that iterates through the object keys using a `for...in` loop if the class only covered basic object manipulation.
+- Exercise 5:  The explanations for why options 1, 3, and 4 are incorrect are missing.  Include these explanations for better learning.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/599ab2b794ecacbfbd494f43913f6e509f8cabf5/week9/day5/ExerciseXP/script.js
+suggestions for improvement:
+- Exercise 2: The provided solution is good, but it could be slightly improved by using a more descriptive function name, such as `getFullName` or `displayFullname`.  The original function name `displayStudentInfo` implies more information might be included than just the name.
+- Exercise 5: The code correctly identifies option 2 as the only correct way to extend the `Dog` class, but it would be beneficial to explicitly explain *why* options 1, 3, and 4 are incorrect.  This would enhance understanding of the `super()` keyword and proper class inheritance.
+- Exercise 6, part 4: The instructions ask for a class with attributes `name`, `type`, and `color`, and a `sound()` method. The current solution uses `displayInfo()` instead of `sound()`, and it also adds an unnecessary parameter to the constructor of the `Mammal` class that isn't mentioned in the requirements. The `sound()` method should return the details of the animal and the sound it makes, not just the sound, and should not require a parameter.
+- Exercise 6, part 5: The `farmerCow` object doesn't use the `sound()` method correctly and adds an extra parameter to the constructor. It also creates a slightly different string than required.
+Correctness: 90%
+-----
