@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week9/day5/DailyChallenge/DailyChallenge.js
+suggestions for improvement:
+- The code successfully fulfills requirements 1, 2, 3, and 4 of the chapter content.  It correctly creates the `Video` class, including the constructor and `watch()` method, and instantiates two `Video` objects.
+- The bonus sections (5 and 6) are missing.  The instructions asked to create an array to store data for five `Video` instances and then loop through the array to create the instances.  This is a significant omission.
+- Consider adding input validation to the constructor to handle cases where the input parameters are not of the expected types.
+Correctness: 90%
+-----
