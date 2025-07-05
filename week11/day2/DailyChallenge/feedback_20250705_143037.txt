@@ -1,0 +1,15 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day2/DailyChallenge/index.html
+suggestions for improvement:
+- The form's `action` attribute is set to `index.html`, which is unnecessary and might cause unexpected behavior.  It should be either removed or set to a proper handler.  Currently, it does not submit the form data to the server, which is expected behavior for this task.
+- The code lacks error handling.  It should gracefully handle cases where the user doesn't enter data in both input fields.
+- Use `addEventListener` instead of relying on the form's default submit behavior. This makes the code cleaner and easier to maintain.
+- Add labels for better accessibility.
+- Improve styling to match the image's output more closely (e.g., add a `<pre>` tag to format the JSON output).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day2/DailyChallenge/script.js
+suggestions for improvement:
+- The code could be slightly improved by using `const` for `formData` to indicate that it's not reassigned after creation.
+- Adding error handling (e.g., checking if name and lastName fields are filled) would enhance user experience.
+Correctness: 100%
+-----
