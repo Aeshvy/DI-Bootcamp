@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week9/day4/DailyChallenge/DailyChallenge.js
+suggestions for improvement:
+- The `usernames` and `highScorePlayers` functions currently use `console.log` to output the results instead of returning arrays as specified in the instructions.  They should return new arrays containing the modified usernames and high-scoring usernames, respectively.
+- Use `map()` instead of `forEach` for creating new arrays based on existing arrays. This is more functional and readable.
+- The code should explicitly return the total score calculation instead of just printing it to the console.
+Correctness: 60%
+-----
