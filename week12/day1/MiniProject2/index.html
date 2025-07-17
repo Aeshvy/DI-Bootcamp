@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .converter {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        select,
+        input,
+        button {
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="converter">
+        <h2>Currency Converter</h2>
+        <label>From:</label><br>
+        <select id="fromCurrency"></select><br>
+        <label>To:</label><br>
+        <select id="toCurrency"></select><br>
+        <label>Amount:</label><br>
+        <input type="number" id="amount" value="1"><br>
+        <button onclick="convert()">Convert</button>
+        <button onclick="switchCurrencies()">Switch</button>
+        <h3 id="result">Result: </h3>
+    </div>
+
+    <script src="converter.js"></script>
+</body>
+
+</html>
