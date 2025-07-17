@@ -1,0 +1,26 @@
+{
+  "SocialMedias": [
+    {"url": "https://linkedin.com/"},
+    {"url": "https://github.com/"},
+    {"url":"https://twitter.com/"}
+  ],
+  "Skills": {
+    "languages": 
+    ["Java","C#", "Python"],
+    "tools": ["JavaScript (ES5, ES6)", "TypeScript", "HTML5", "CSS (SCSS/SASS)", "React"]
+  },
+  "Experiences": [
+    {
+      "company": "Demo1 Technologies",
+      "role": "Full Stack Developer",
+      "years": "2017-01-01 New York, USA",
+      "works": "Built and updated various Chrome Extensions"
+    },
+    {
+      "company": "Demo2 Technologies",
+      "role": "UI Designer",
+      "years": "2016-05-01 Beijing, China",
+      "works": "Design user-friendly web page"
+    }
+  ]
+}
