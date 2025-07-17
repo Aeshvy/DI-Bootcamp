@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week9/day2/DailyChallenge/DailyChallenge.js
+suggestions for improvement:
+- The `cloneGroceries` function is not actually implemented; it's just declared.  The code related to copying `client` and `groceries` should be moved inside this function.
+- Add console logs inside `cloneGroceries` to display the values of `user`, `client`, `shopping`, and `groceries` before and after the modifications, to explicitly demonstrate pass-by-value and pass-by-reference behavior as instructed in the challenge description.  This would directly address the question posed in the challenge about whether modifications are reflected in the copied variables.
+- The comments explaining why the modifications are or aren't reflected are good, but the challenge specifically asks for this explanation within the function itself.
+- The challenge asks for use of the `forEach` method in the `displayGroceries` function.  It's correctly implemented, but should be called at the end to actually display the output.
+Correctness: 70%
+-----

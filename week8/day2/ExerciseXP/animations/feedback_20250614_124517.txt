@@ -1,0 +1,29 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/1a533a7d59e66496a49c7ce87180360032eabb10/week8/day2/ExerciseXP/animations/animations1.html
+suggestions for improvement:
+- Part III of Exercise 1 needs improvement. The code should clear the interval when 5 paragraphs exist, but it's not clear from your code how this is implemented.  Add a check within the interval function itself to count paragraphs and clear the interval accordingly.
+- Exercise 2 needs to be more robust: it currently lacks error handling and should include a check for whether the button has already been clicked to avoid multiple intervals running simultaneously.
+- In Exercise 2, the animation is done using milliseconds. This is highly inefficient. Consider using a larger time interval (e.g., 10ms) and adjusting the movement increment accordingly.  1ms increments are unnecessarily resource-intensive.
+- Add comments to your Javascript code to improve readability and explain the logic of different parts.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/1a533a7d59e66496a49c7ce87180360032eabb10/week8/day2/ExerciseXP/animations/animations1.js
+suggestions for improvement:
+- Add comments to explain the purpose of each section of the code.
+- Consider using more descriptive variable names (e.g., instead of `count`, use `paragraphCount`).
+- For better performance with a large number of paragraphs, explore techniques like documentFragment to reduce DOM manipulations.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/1a533a7d59e66496a49c7ce87180360032eabb10/week8/day2/ExerciseXP/animations/animations2.html
+suggestions for improvement:
+- The `animations2.js` file is missing.  The solution should include the JavaScript code to make the animation work.
+- The animation's performance could be improved by using `requestAnimationFrame` instead of `setInterval`.  `setInterval` can be unreliable and may lead to jerky animations if the JavaScript execution takes longer than the interval.
+- Add error handling.  What happens if the 'animate' div is not found? The code should gracefully handle this.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/1a533a7d59e66496a49c7ce87180360032eabb10/week8/day2/ExerciseXP/animations/animations2.js
+suggestions for improvement:
+- The code for Exercise 1 is missing.  Add the Javascript code to complete all parts of Exercise 1 (using `setTimeout` and `setInterval` to manipulate the DOM by adding paragraphs).
+- While the animation in Exercise 2 works, using 1ms intervals is inefficient. Consider increasing the interval to 10ms or even higher for smoother animation without impacting performance.  The current implementation might overload the browser.
+- Add comments to explain the purpose of variables and functions in Exercise 2 for better readability.
+Correctness: 100%
+-----
