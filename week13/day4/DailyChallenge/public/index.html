@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Emoji Guessing Game</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+        }
+
+        .emoji {
+            font-size: 5rem;
+        }
+
+        .feedback {
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .score,
+        .leaderboard {
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>emoji game</h1>
+    <h1>🎮 Emoji Guessing Game</h1>
+
+    <div>
+        <label for="playerName">Your Name: </label>
+        <input id="playerName" type="text" placeholder="Enter name" required>
+        <button onclick="loadQuestion()">Start</button>
+    </div>
+
+    <div class="emoji" id="emojiDisplay">❓</div>
+    <div id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="score" id="score">Score: 0</div>
+
+    <div class="leaderboard">
+        <h2>🏆 Leaderboard</h2>
+        <ul id="leaderboardList"></ul>
+    </div>
+
+    <script>
+        let correctAnswer = '';
+        let score = 0;
+
+        async function loadQuestion() {
+            const res = await fetch('/question');
+            const data = await res.json();
+
+            correctAnswer = data.correctAnswer;
+
+            document.getElementById('emojiDisplay').textContent = data.emoji;
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+
+            data.options.forEach(option => {
+                const btn = document.createElement('button');
+                btn.textContent = option;
+                btn.onclick = () => submitGuess(option);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        async function submitGuess(selected) {
+            const playerName = document.getElementById('playerName').value || 'Anonymous';
+
+            const res = await fetch('/guess', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ answer: selected, correctAnswer, player: playerName })
+            });
+
+            const result = await res.json();
+            score = result.score;
+
+            document.getElementById('feedback').textContent = result.correct
+                ? '✅ Correct!'
+                : `❌ Wrong! The correct answer was "${correctAnswer}".`;
+
+            document.getElementById('score').textContent = `Score: ${score}`;
+            await loadLeaderboard();
+            setTimeout(loadQuestion, 1500);
+        }
+
+        async function loadLeaderboard() {
+            const res = await fetch('/leaderboard');
+            const data = await res.json();
+
+            const list = document.getElementById('leaderboardList');
+            list.innerHTML = '';
+            data.forEach(entry => {
+                const li = document.createElement('li');
+                li.textContent = `${entry.name}: ${entry.score}`;
+                list.appendChild(li);
+            });
+        }
+
+        // loadQuestion();
+        // loadLeaderboard();
+    </script>
 </body>
+
 </html>

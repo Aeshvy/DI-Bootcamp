@@ -1,8 +1,11 @@
-const emojis = [
-    { emoji: '😀', name: 'Smile' },
-    { emoji: '🐶', name: 'Dog' },
-    { emoji: '🌮', name: 'Taco' },
-    // Add more emoji objects
+module.exports = [
+  { emoji: "😀", name: "Smile" },
+  { emoji: "🐶", name: "Dog" },
+  { emoji: "🌮", name: "Taco" },
+  { emoji: "🚗", name: "Car" },
+  { emoji: "🍕", name: "Pizza" },
+  { emoji: "👽", name: "Alien" },
+  { emoji: "🎸", name: "Guitar" },
+  { emoji: "🏀", name: "Basketball" },
+  { emoji: "🐱", name: "Cat" }
 ];
-
-module.exports = { emojis };
