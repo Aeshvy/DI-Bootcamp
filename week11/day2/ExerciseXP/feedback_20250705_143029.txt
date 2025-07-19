@@ -1,0 +1,29 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day2/ExerciseXP/Exercise1.html
+suggestions for improvement:
+- Add input validation to prevent script injection vulnerabilities.  For example, sanitize user input before processing.
+- While functional, the form's styling could be improved for better user experience.
+- Exercise 2 (POST method) is missing.  The instructions require a separate implementation of the form using POST.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day2/ExerciseXP/Exercise2.html
+suggestions for improvement:
+- The form's action should ideally be a separate script (e.g., a PHP or server-side script) to process the POST data.  Using the same HTML file for both the form and the data processing is not a standard practice and might lead to confusion.
+- Add some basic input validation to prevent issues like empty fields or excessively long inputs. 
+- Consider adding more robust security measures, such as input sanitization, to prevent potential vulnerabilities such as XSS attacks if the POST data is handled on the server side.  Currently,  it's only handling on the client-side, which limits risk but is less ideal than server-side sanitization.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day2/ExerciseXP/Exercise3.html
+suggestions for improvement:
+- The HTML file is missing the forms required by Exercises 1 and 2.  It only includes a script tag for Exercise 3.
+- Exercise 3's JavaScript code (`Exercise3.js`) is not provided, making it impossible to assess its correctness in converting the JS object to JSON and handling the breakpoint.
+- The HTML file needs to include forms with appropriate input fields (text, textarea) and submit buttons, specifying the GET and POST methods respectively for Exercises 1 and 2.
+- Add functionality to handle the form submissions (e.g., display the data in Exercise 1 using the URL, and utilize the Network tab for Exercise 2's POST data).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day2/ExerciseXP/Exercise3.js
+suggestions for improvement:
+- Add comments explaining the purpose of `marioGameJSON` and `marioGameParsed` variables.
+- Consider using a more descriptive variable name than `marioGameParsed` (e.g., `marioGameObject`).
+- The code directly addresses all parts of Exercise 3.  No improvements needed beyond minor style enhancements.
+Correctness: 100%
+-----

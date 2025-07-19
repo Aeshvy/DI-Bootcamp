@@ -1,0 +1,19 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day4/DailyChallenge/DailyChallenge1.js
+suggestions for improvement:
+- The error messages could be more descriptive, providing more context (e.g., specifying the index of the non-string element in `makeAllCaps`).
+- For better performance with very large arrays, consider using more efficient sorting algorithms than the default `sort()` (e.g., merge sort or quicksort) in `sortWords`.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day4/DailyChallenge/DailyChallenge2.html
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day4/DailyChallenge/DailyChallenge2.js
+suggestions for improvement:
+- Improve error handling in `joinWords` to provide more specific error messages to the user, potentially showing an error message on the page instead of just logging it to the console.
+- Add input validation to `toMorse` to handle cases where the user enters only whitespace or an empty string.
+- Consider using a more user-friendly method for displaying the Morse code translation on the page instead of using `<br>`. For instance, you could style each Morse code sequence within its own div or span element for better visual separation and control.
+- The `toMorse` function currently only handles lowercase input.  Adding a check that converts input to lowercase, but retains any original capitalization in the output would be an improvement.
+Correctness: 95%
+-----

@@ -1,0 +1,17 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day4/ExerciseXP/Exercise1.js
+suggestions for improvement:
+- The code is well-structured and easy to understand.  Consider adding a more descriptive message in the resolve/reject, perhaps indicating that the number is successfully compared or the comparison failed.
+- While functionally correct, the comments could be slightly improved for even better readability. For example, instead of `// the promise resolves if the argument is less than or equal to 10`, consider `// Resolve the promise if the number is less than or equal to 10`.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day4/ExerciseXP/Exercise2.js
+suggestions for improvement:
+- The code is already quite readable.  Consider adding a comment explaining the purpose of the `promise` variable for enhanced clarity.
+- While the performance is good for this specific task, for more complex scenarios, exploring alternative async/await methods might improve overall code structure and readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/a7911f99a20f64deeb80041b170bed5bb4c8a92f/week11/day4/ExerciseXP/Exercise3.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
