@@ -1,0 +1,47 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/emojis.js
+suggestions for improvement:
+- The provided code only defines an array of emoji objects. It does not implement any server-side logic using Express.js, handle user input, or provide game functionality as required by the challenge.
+- The code needs to be expanded to include an Express.js server,  handling of POST requests for user guesses, score tracking, and the generation of multiple-choice options for the emoji guessing game.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/models/emojis.js
+suggestions for improvement:
+- This code only provides a sample emoji array.  It does not implement the Express server, the game logic (random emoji selection, option generation, score tracking, form handling, POST request processing, feedback, leaderboard), or any client-side interaction using Fetch API as required by the chapter content.
+- The chapter requires building a complete emoji guessing game API using Express.js and handling client-side interactions.  This code only provides a data structure (the emoji array).
+- Add an Express.js server, routes for handling game requests, and client-side code (HTML form, JavaScript with Fetch API) to make the game functional.
+- Implement game logic (random emoji selection, score tracking, etc.) to meet all requirements listed in the chapter.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/package-lock.json
+suggestions for improvement:
+- This is a `package-lock.json` file, not code that implements the emoji guessing game.  The `package-lock.json` only describes the dependencies for a Node.js project using Express.js.  No game logic is present.
+- To receive a correctness score, please provide the actual code for the Express.js server and client-side logic that implements the emoji guessing game as described in the chapter content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/package.json
+suggestions for improvement:
+- This is a `package.json` file, not an implementation of the emoji guessing game.  It only sets up the project dependencies. The core logic of the game (server-side and client-side) is missing.
+- Add the actual server-side code (server.js) and client-side code (e.g., HTML, JavaScript) to implement the emoji guessing game as described in the chapter content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/public/index.html
+suggestions for improvement:
+- The server-side code (Express.js API) is missing. The client-side code assumes the existence of `/question`, `/guess`, and `/leaderboard` endpoints, but they are not provided.  The solution needs to implement this backend component.
+- The leaderboard implementation lacks persistence.  Scores are likely lost upon server restart. A database (e.g., SQLite, MongoDB) is needed for persistent storage.
+- Error handling is minimal.  The code should include robust error handling for network requests and data processing to avoid crashes and provide informative feedback to the user.
+- Security could be improved.  The player name is directly taken from the input field. Input sanitization is needed to prevent potential vulnerabilities (e.g., cross-site scripting attacks).
+- The code could benefit from separating concerns further.  The client-side script combines presentation logic, data fetching, and game logic, making it harder to maintain and test. Consider using a framework like React, Vue, or Angular to better organize code.
+- Consider adding a loading indicator or visual feedback while fetching data to improve user experience.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/server.js
+suggestions for improvement:
+- The emoji data should be validated to prevent errors.  Handle cases where the emojis array might be empty or contain invalid data.
+- Implement input sanitization to prevent script injection vulnerabilities, especially in the player's name.
+- The leaderboard is stored in memory.  For a production application, persist the leaderboard using a database (e.g., SQLite, MongoDB) to avoid data loss on server restarts.
+- Add error handling for cases where the `/guess` endpoint receives incomplete or malformed data.
+- Improve the shuffleArray function for better randomness; the current implementation is not cryptographically secure and may produce biased results.
+- Consider adding more robust error handling throughout the API to handle unexpected situations and provide informative error messages.
+- The front-end (using Fetch API) is missing, which is a crucial part of the game implementation as described.
+Correctness: 85%
+-----
