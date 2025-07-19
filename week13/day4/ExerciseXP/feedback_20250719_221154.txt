@@ -1,0 +1,78 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm. It doesn't contain any code that addresses the exercises described in the Chapter Content/Questions.  To assess the exercises, you need to provide the actual `server.js` and `app.js` files with the implemented API routes.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It does not contain the `server.js` file or the implementation of the blog API as required in Exercise 1.  It also doesn't include the code for Exercise 2 or Exercise 3.
+- Create `server.js` and implement the CRUD operations for blog posts as specified in Exercise 1.
+- Implement Exercise 2 (book API) in a separate `app.js` file within the `book-api` directory.
+- Implement Exercise 3 (using Axios and a data module) in a separate `app.js` and `data/dataService.js` within the `crud-api` directory.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/server.js
+suggestions for improvement:
+- Implement input validation for POST and PUT requests to prevent vulnerabilities like injection attacks.
+- Consider using a more robust database solution instead of an in-memory array for production environments.
+- Add more comprehensive error handling, including specific error codes for different types of errors.
+- Improve the readability of the code by adding more comments and breaking down complex functions into smaller, more manageable ones.
+- The error handling could be improved by providing more specific error messages and status codes.
+- For better performance with a larger dataset, explore using a more efficient data structure for the `posts` array (like a Map for faster lookups by ID).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/app.js
+suggestions for improvement:
+- The code only implements GET, POST for books.  The instructions for Exercise 2 also specify PUT (update) and DELETE (delete) routes, which are missing.
+- Error handling could be improved. While a 404 is returned for a missing book, more robust error handling (e.g., input validation, handling unexpected errors) is needed.
+- The in-memory `books` array is not a scalable solution. For a real-world application, a database should be used.
+- Security is lacking;  input validation is minimal.  A malicious user could potentially inject harmful code or data into the title, author or publishedYear fields.
+- The root route '/' is used for retrieving all books, which is not best practice; `/api/books` would be a more standard and clearer endpoint.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm.  It does not contain any code that implements the exercises described in the chapter content.  To receive a correctness score, you need to provide the actual `app.js` or `server.js` files containing the Express.js code for the specified API exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It sets up the project structure and dependencies but doesn't contain the actual server code (app.js) required to implement the exercises. The exercises require building a functional server with CRUD operations.
+- Implement the `app.js` file with the Express server, routes, and data handling as specified in Exercises 1, 2, and 3.  This includes defining the routes (GET, POST, PUT, DELETE), handling requests, and returning appropriate responses.
+- Exercise 1 requires error handling for invalid routes and server errors.  Exercise 3 needs a `data` directory and `dataService.js` file to fetch data using Axios.
+- Add error handling and input validation to prevent vulnerabilities such as SQL injection (although not applicable here since it uses an in-memory array).
+- Use a more robust data storage solution than an in-memory array for production environments. Consider using a database like MongoDB or PostgreSQL.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/app.js
+suggestions for improvement:
+- The code only implements a single GET route fetching data from an external API.  Exercises 1 and 2 require implementing CRUD operations for a local data store, which is missing.
+- Error handling is basic. More specific error handling for different scenarios (e.g., network errors, API errors) should be implemented.
+- No input validation is performed.  For production, input validation is critical to prevent vulnerabilities.
+- The data module (`dataService.js`) should be included for a complete assessment. Without seeing it, we cannot fully assess its correctness and security.
+- The code addresses Exercise 3 partially. It correctly fetches data using Axios and handles basic error cases but lacks the Create, Update, and Delete functionalities required by a CRUD API.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/data/dataService.js
+suggestions for improvement:
+- Add error handling to the `fetchPosts` function.  The function should handle potential network errors or errors from the JSONPlaceholder API gracefully, perhaps by returning an error object or throwing a custom error.
+- Consider adding a timeout to the `axios.get` request to prevent indefinite hanging if the API is unresponsive.
+- The code could be slightly more readable by using `try...catch` block to handle potential errors within the `async` function.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, not the actual implementation of the exercises.  It shows the dependencies installed for a project named `crud-api`, but it doesn't contain the server code (`app.js` and `data/dataService.js`) described in Exercise 3. Therefore, it's impossible to assess correctness based on the provided code alone.
+- To evaluate the code, please provide the actual `app.js` and `dataService.js` files.
+- Exercise 1 and 2 are entirely missing.
+- Even if `app.js` and `dataService.js` were provided, security would need to be thoroughly checked (e.g., input validation, protection against injection attacks, dependency vulnerabilities).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file,  it does not contain any implementation for the exercises described in the chapter content.  The exercises require building Express.js APIs with CRUD functionality, including data handling and potentially using Axios for external API calls.
+- Create the `server.js`, `app.js`, `dataService.js` files and implement the API routes as specified in the instructions.
+- Implement the GET, POST, PUT, and DELETE functionality for the blog posts and books APIs in Exercises 1 and 2 respectively.
+- In Exercise 3, implement the `fetchPosts` function in `dataService.js` to retrieve data from the JSONPlaceholder API using Axios and handle the response in your Express app.
+Correctness: 0%
+-----
