@@ -1,0 +1,111 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise1/products.js
+suggestions for improvement:
+- Add comments to explain the purpose of the `products` array and its elements.
+- Consider using a more descriptive variable name instead of `products`, such as `productCatalog` or `availableProducts`.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise1/shop.js
+suggestions for improvement:
+- The `products.js` file is missing, making it impossible to fully assess the correctness of the code.  The solution assumes a structure for the `products` array that might not be present in a real `products.js` file. Add a sample `products.js` for complete evaluation.
+- Error handling is missing.  The `findProductByName` function will return `undefined` if a product is not found.  Consider adding error handling (e.g., returning null, throwing an error, or providing a default message).
+- The code could benefit from more descriptive variable names (e.g., `productName` could be `searchedProductName`).
+- Consider adding input validation to the `findProductByName` function to handle edge cases such as empty or null input.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- Add error handling for the case where the `people` array is empty.  This would prevent a division by zero error.
+- Consider using a more descriptive variable name than `people` (e.g., `persons` or `individuals`).
+- The comments could be slightly improved for clarity. For example, instead of  `// Run app.js and confirm that the average age is correctly calculated and displayed.`  you could say `// Execute this script using 'node app.js' to calculate and display the average age.`
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise2/data.js
+suggestions for improvement:
+- The code is excellent and directly addresses Exercise 2.  However, adding comments explaining the purpose of `people` array and the `export default` statement would enhance readability further.
+- Consider adding error handling (e.g., checking for empty array) in a real-world application to make the average age calculation more robust.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- The code is missing the `readFile` function call to read from 'Hello World.txt'.  It only writes to 'Bye World.txt'.
+- Add error handling for the `readFile` operation.
+- Consider using `async/await` for cleaner asynchronous file operations.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise3/fileManager.js
+suggestions for improvement:
+- The `readFile` and `writeFile` functions use callbacks, which is a valid approach but can make the code harder to read and reason about. Consider using promises or async/await for better error handling and code flow.
+- Add input validation to check if the filePath is valid and exists before attempting to read or write.  The current code will throw errors if the files don't exist.
+- Include more robust error handling. For example, the `writeFile` function only handles errors during the write operation itself; it doesn't account for issues that might occur before that stage (e.g., invalid file path).
+- Add logging or more informative error messages to help with debugging.  Currently, only a generic callback is used to signal success or failure.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/file-explorer/copy-file.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/file-explorer/read-directory.js
+suggestions for improvement:
+- The provided code only addresses part of Exercise 7 (listing files in a directory). It's missing the file copying functionality from `copy-file.js`.
+- Error handling could be improved.  Instead of `if (err) throw err;`,  more informative error messages should be provided to the user.
+- Add asynchronous file operations for better performance with larger files and directories.
+- Consider using `fs.promises` for cleaner async code.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/app.js
+suggestions for improvement:
+- Add comments to explain the purpose of each section of the code.
+- Consider using more descriptive variable names (e.g., instead of `numbers`, use `numberArray`).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/math.js
+suggestions for improvement:
+- The provided code defines functions for addition and multiplication, but it does not address any of the exercises in the chapter content.  It needs to be replaced with code that solves at least one of the exercises (e.g., Exercise 5 which involves creating a custom module with addition and multiplication functions and using it with lodash).
+- The code should be integrated into a complete solution for one of the exercises, including file I/O, module imports/exports (CommonJS or ES6), and potentially the use of lodash or chalk as instructed.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/package-lock.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not the actual implementation of Exercise 5.  It correctly shows the installation of the `lodash` package, which is a requirement of the exercise. However, it lacks the crucial `math.js` and `app.js` files that contain the actual logic for addition, multiplication, and the use of `lodash`.
+- Add `math.js` and `app.js` files demonstrating the implementation of the custom module and the use of lodash functions.
+- Include example calculations within `app.js` to fully illustrate the functionality.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/package.json
+suggestions for improvement:
+- This JSON is a `package.json` file,  it doesn't contain any code to assess for correctness related to the exercises. It only shows the project setup and dependency for lodash.  The exercises require implementing JavaScript modules and file handling, none of which is present in this JSON.
+- To evaluate correctness, provide the actual JavaScript code for the exercises (products.js, shop.js, data.js, app.js, fileManager.js, todo.js, etc.)
+- Add the actual implementations of the exercises to get a proper correctness score.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file.  It doesn't contain any code to execute.  To provide feedback on code, please provide the actual `app.js` file for Exercise 6 which utilizes the `chalk` package.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/package.json
+suggestions for improvement:
+- This JSON is a `package.json` file, not a solution to any of the exercises.  It shows the setup for using the `chalk` package, but doesn't contain any code that addresses the exercises in the document.
+- To get a proper score, provide the actual `.js` files for each exercise as requested in the prompt.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/todoApp/app.js
+suggestions for improvement:
+- The `listTasks` method should ideally return the list of tasks instead of printing it directly.  The current implementation prints it twice.
+- Add error handling (e.g., try-catch blocks) to the `TodoList` class methods to handle potential issues like file I/O errors (if applicable) or invalid input.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/todoApp/todo.js
+suggestions for improvement:
+- The error handling in `markTaskComplete` is good, but consider adding more specific error messages for debugging purposes. For example, instead of a generic 'Task index out of bounds', you could say 'Task index {index} is out of bounds for a list of length {this.tasks.length}'.
+- The `listTasks` method creates a new array.  For very large lists, this could impact performance. Consider adding a method that returns the internal `tasks` array directly if a mutable copy is acceptable for a specific use-case. This would improve performance in cases where direct access to the array is needed.
+- Consider adding input validation to `addTask` to prevent adding empty or null tasks. This enhances robustness and improves user experience.
+- The use of a default export (`export default TodoList;`) along with a named export (`export class TodoList`) might be slightly confusing.  Consistency in export style is preferred.  It's better to choose either all named exports or all default exports unless there's a strong reason otherwise.
+Correctness: 100%
+-----
