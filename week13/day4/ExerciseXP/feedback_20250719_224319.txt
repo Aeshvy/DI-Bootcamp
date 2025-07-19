@@ -1,0 +1,73 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm. It does not contain any implementation of the exercises described in the Chapter Content/Questions.  To receive a correctness score, you need to provide the `server.js` or `app.js` files with the actual code that implements the RESTful APIs for blogs and books, and the CRUD API using Axios and a data module.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, which is only a project configuration file.  It doesn't contain any implementation of the Express.js API as described in the exercises.  The exercises require creating `server.js` (or `app.js`), implementing CRUD operations, and error handling.  This `package.json` only sets up the project dependencies, but doesn't fulfill any of the actual coding tasks.
+- Create `server.js` (or `app.js`) files and implement the API endpoints as instructed in the exercises.
+- Add error handling for cases such as incorrect input or database errors.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/server.js
+suggestions for improvement:
+- Improve error handling to be more specific.  For example, handle cases where the request body is missing required fields in POST and PUT requests.
+- Implement input validation to prevent issues like SQL injection (although not directly applicable here since it's an in-memory array, it's good practice).
+- Consider using a more robust database solution instead of an in-memory array for production environments.  The in-memory array will lose data on restarts.
+- Add more comprehensive logging for debugging and monitoring.
+- The error handling is a bit rudimentary. It should distinguish between client errors (4xx) and server errors (5xx).  Currently, all errors are treated as 404.
+- For better readability, consider separating the route handlers into a separate file or files.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/app.js
+suggestions for improvement:
+- The API endpoints are inconsistent.  Exercise 2 specifies `/api/books` while the code uses `/books` and `/`.  Maintain consistency for better readability and maintainability.
+- Error handling could be more robust.  Consider handling cases where the request body is missing required fields in the POST route.  Add input validation.
+- The in-memory `books` array is not a scalable solution.  For a production environment, consider using a database.
+- Security is lacking.  In a real application, input sanitization and validation are crucial to prevent vulnerabilities like SQL injection (although not directly applicable here since it's an in-memory array) and cross-site scripting (XSS).
+- The GET / route is not part of the Exercise 2 requirements.  Remove this route to adhere to instructions.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency file for npm. It does not contain any code that addresses Exercises 1, 2, or 3.  You need to provide the actual `server.js` or `app.js` files containing the Express.js code for the API endpoints.
+- To receive a proper evaluation, please provide the code for the three exercises (server.js for Exercise 1, app.js for Exercise 2, and app.js and dataService.js for Exercise 3).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file. It doesn't contain any implementation of the exercises described in the Chapter Content/Questions.  The exercises require creating `server.js`, `app.js`, and `dataService.js` files with Express.js and Axios code to build APIs.
+- Add the actual server code (including routes, request handlers, and error handling) for each exercise (blog-api, book-api, crud-api) as described in the instructions.
+- Implement CRUD operations (Create, Read, Update, Delete) for the blog posts and books as specified.
+- Create the data module (`dataService.js`) for the third exercise to fetch data from the JSONPlaceholder API using Axios.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/app.js
+suggestions for improvement:
+- The code only implements a single GET endpoint, while Exercises 1 and 2 require implementing CRUD operations (Create, Read, Update, Delete).
+- Error handling is basic.  More robust error handling should be implemented, potentially differentiating between client-side errors (e.g., bad request) and server-side errors.
+- The `dataService.js` file is missing from the provided code, making it impossible to assess the correctness of the Axios integration fully.  The  `fetchPosts` function's implementation needs to be reviewed for proper error handling and efficiency.
+- Input validation is missing.  Before processing data from external sources or user inputs, validation should be performed to prevent vulnerabilities and unexpected behavior.
+- Security best practices should be implemented, such as using a proper logging system instead of simple console logs and protecting against common vulnerabilities like Cross-Site Scripting (XSS) if handling user-generated content.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/data/dataService.js
+suggestions for improvement:
+- The provided code only implements part 2 (creating the data module) of Exercise 3.  It's missing the Express server setup (part 1) and the integration of the data module into the server (part 3).
+- Add error handling to the `fetchPosts` function.  The current implementation doesn't handle potential network errors or API request failures.
+- Consider adding comments to explain the purpose of the `fetchPosts` function and its parameters (though there are none in this case).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm. It doesn't contain any code that implements the exercises described in the Chapter Content/Questions.  To receive a correctness score, you need to provide the actual `server.js`, `app.js`, and `dataService.js` files with the implementation for Exercises 1, 2, and 3 respectively.
+- The exercises require building RESTful APIs using Express.js and Axios. This lockfile only shows the project dependencies, not the actual API implementation.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/package.json
+suggestions for improvement:
+- This JSON is a `package.json` file, not code implementing the exercises.  It correctly sets up the dependencies (express and axios) for the `crud-api` project, but provides no actual implementation of the API endpoints or data handling described in Exercises 1, 2, and 3.
+- The exercises require creating `server.js`, `app.js`, and `dataService.js` files with actual Express.js and Axios code to build and manage API endpoints. This JSON only describes the project setup, not its functionality.
+Correctness: 0%
+-----
