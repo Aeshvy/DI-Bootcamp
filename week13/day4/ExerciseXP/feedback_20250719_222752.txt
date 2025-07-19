@@ -1,0 +1,80 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm. It does not contain any code that implements the exercises described in the Chapter Content/Questions.  To receive a correctness score, the code needs to implement the `blog-api`, `book-api`, and `crud-api` as instructed.  Each API needs server.js/app.js files that utilize the Express.js framework to create RESTful APIs.
+- Add `server.js` and `app.js` files implementing the API endpoints as described in each exercise.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file. It doesn't contain the actual server code (`server.js`) required to complete Exercise 1.  Exercise 1 requires implementing CRUD operations for a blog API using Express.js. This `package.json` only sets up the project environment.
+- Exercises 2 and 3 are entirely missing. The response only includes the setup for the first exercise.
+- Add `server.js` file with the actual implementation of the blog API as described in Exercise 1.
+- Implement Exercises 2 and 3.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/blog-api/server.js
+suggestions for improvement:
+- Implement input validation for POST and PUT requests to prevent unexpected data types or malicious input.
+- Consider using a more robust database solution instead of an in-memory array for production environments.  The current `posts` array is lost on server restart.
+- Improve error handling to provide more specific error messages and handle potential exceptions during data processing.
+- Add logging for better debugging and monitoring.  Log requests and responses, including errors.
+- The error handling middleware is a bit simplistic.  It would be better to differentiate between various HTTP error codes (e.g., 400 Bad Request, 500 Internal Server Error) based on the type of error encountered.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/app.js
+suggestions for improvement:
+- The code implements only a subset of Exercise 2 and none of Exercises 1 or 3. It's missing UPDATE and DELETE functionalities for a complete CRUD API.
+- Error handling is minimal.  More robust error handling should be implemented for invalid input (e.g., non-numeric bookId, missing required fields in POST requests).
+- The use of an in-memory array (`books`) as a database is suitable for a simple exercise, but it's not scalable or persistent.  For a production environment, a real database (like MongoDB, PostgreSQL, etc.) is needed.
+- Security is lacking.  Input validation is minimal, making the API vulnerable to injection attacks. Sanitize all user inputs before using them.
+- The root path ('/') is used for GET all books. It should use '/api/books' as specified in the instructions.
+- Add more comprehensive logging for debugging and monitoring purposes.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm. It does not contain any code that implements the exercises described in the Chapter Content/Questions.  To assess the exercises, the actual `app.js` (or `server.js`) files implementing the API are needed.
+- Add `app.js` (or `server.js`) files with the actual Express.js code to assess correctness.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/book-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file. It doesn't contain any actual implementation of the Express.js API server described in Exercises 1, 2, and 3.  It only sets up the project structure and installs Express.
+- The exercises require creating `server.js` (or `app.js`), implementing routes (GET, POST, PUT, DELETE), and handling data (either in-memory or from an external API).  None of this is present in the submitted code.
+- Add `app.js` (or `server.js`) file with the implementation of the Express.js server, including the routes and data handling as specified in the exercises.
+- For Exercise 3, create the `data` directory and `dataService.js` file to fetch data using Axios from the JSONPlaceholder API.
+- Implement proper error handling for all scenarios (e.g., book not found, invalid input, API request failures).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/app.js
+suggestions for improvement:
+- The code only implements part of Exercise 3. It's missing the CRUD operations for Exercises 1 and 2, and the data module implementation in Exercise 3 is only partially complete (only GET is implemented).
+- Add error handling for Axios requests in `dataService.js` to handle network errors or API errors more robustly.
+- The code uses a single route (`/`) for fetching all posts. Consider using `/posts` for better clarity and RESTful design.
+- Implement robust input validation for POST, PUT, and DELETE requests to prevent vulnerabilities (e.g., SQL injection, if using a database).
+- Consider adding middleware for logging, request tracing, and rate limiting to improve security and monitoring.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/data/dataService.js
+suggestions for improvement:
+- Add error handling to the `fetchPosts` function to gracefully handle potential network errors or issues with the JSONPlaceholder API.  Consider using a `try...catch` block.
+- The `fetchPosts` function could be made more robust by including options for configuring the Axios request (e.g., timeout settings).
+- For better readability, consider using more descriptive variable names (e.g., instead of `response`, use `apiResponse`).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm. It does not contain any code that implements the exercises described in the chapter content. To receive a higher correctness score, provide the actual `app.js` and `dataService.js` files with the implementation of the exercises.
+- Add error handling in `dataService.js` to gracefully handle potential network errors when fetching data from JSONPlaceholder API.
+- Improve security by validating user inputs and preventing injection attacks (especially for POST/PUT routes in Exercise 1 and Exercise 2). This is crucial for a production environment.
+- For better readability, use descriptive variable and function names in your code.  Implement consistent indentation and code formatting using linters.
+- In Exercise 1 and 2, using an in-memory array as a 'database' is suitable for the exercise but not for a real application. Consider using a proper database (e.g., MongoDB, PostgreSQL) for better data persistence and scalability.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/ExerciseXP/crud-api/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, which is a configuration file for a Node.js project. It does not contain any code that addresses the exercises described in the Chapter Content/Questions.  It only defines project dependencies and metadata.
+- The exercises require creating `server.js` and `app.js` files with Express.js code for building APIs.  This `package.json` sets the stage for such files, but provides no implementation details relevant to the exercise.
+- Add `server.js` and/or `app.js` files with the actual code implementations to meet the exercise requirements.
+Correctness: 0%
+-----
