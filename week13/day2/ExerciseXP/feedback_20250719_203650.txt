@@ -1,0 +1,108 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise1/products.js
+suggestions for improvement:
+- Add comments to explain the purpose of the `products` array and its individual elements.
+- Consider using a more descriptive variable name than `products`, such as `productCatalog` or `availableProducts` for better readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise1/shop.js
+suggestions for improvement:
+- The `products.js` file is missing.  The assessment requires creating this file with an array of product objects to be used by `shop.js`. Without `products.js`, the code cannot fully demonstrate the intended functionality of importing and using modules.
+- Add error handling.  The `findProductByName` function will return `undefined` if no matching product is found.  Consider adding a check for this and handling it gracefully (e.g., returning a message or throwing an error).
+- Consider using a more descriptive variable name than `products`.  Something like `productCatalog` or `availableProducts` might improve readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- The code could benefit from error handling.  What if `people` is empty?  Adding a check for `people.length === 0` would prevent a division by zero error.
+- Consider adding a more descriptive variable name than `people`.  Something like `persons` or `individuals` might improve readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise2/data.js
+suggestions for improvement:
+- The code is excellent and directly addresses Exercise 2.  However, adding a comment explaining the purpose of the `people` array would slightly improve readability.
+- Consider adding error handling (e.g., for cases where the `people` array is empty) to make the code more robust, although it's not explicitly required by the instructions.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- The code is missing the `readFile` function call to read from `Hello World.txt`.  The exercise explicitly requires reading from this file before writing to `Bye World.txt`.
+- Error handling for `readFile` is missing. The code should handle potential errors during file reading.
+- The code should use asynchronous operations (`readFile` and `writeFile`) consistently using promises or async/await for better readability and error handling.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise3/fileManager.js
+suggestions for improvement:
+- The `readFile` and `writeFile` functions use callbacks, which is a valid approach but can make the code harder to read and maintain compared to using Promises or async/await.  Consider refactoring to use Promises for better error handling and readability.
+- Error handling could be improved. Instead of just passing the error to the callback, consider logging the error with more context (e.g., filename, error message) for better debugging.
+- Add input validation to prevent unexpected behavior. For example, check if the `filePath` and `content` (in `writeFile`) are valid before attempting file operations.
+- The 'utf8' encoding is hardcoded. While appropriate for many cases, consider making it configurable to handle different encodings.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/file-explorer/copy-file.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/file-explorer/read-directory.js
+suggestions for improvement:
+- The provided code only addresses a small part of Exercise 7 (reading a directory). It doesn't include the file copying functionality from Exercise 7 (copying from source.txt to destination.txt).
+- Error handling is minimal; consider more robust error handling (e.g., specific error types and more informative messages).
+- Add comments explaining the purpose of the code sections for better readability.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/app.js
+suggestions for improvement:
+- Add comments explaining the purpose of each section of the code.
+- Consider using more descriptive variable names (e.g., instead of `numbers`, use `inputNumbers`).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/math.js
+suggestions for improvement:
+- The provided code defines functions for addition and multiplication, but it does not address any of the exercises outlined in the chapter content.  The exercises involve working with Node.js modules, the `fs` module, creating and using custom modules, and using npm packages like `lodash` and `chalk`.  This code is a standalone math function and is unrelated to the chapter's objectives.
+- To receive a higher correctness score, the code should implement at least one of the exercises described. For example, it could implement Exercise 5, which involves creating a custom module with addition and multiplication functions and using it in conjunction with lodash.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, not actual code implementing the exercises.  It shows that the `lodash` package was installed, which is a part of Exercise 5.  However, it doesn't contain the `math.js` and `app.js` files required to complete Exercise 5. 
+- The `package-lock.json` itself is well-formatted and contains the necessary information about the project's dependencies.
+- To receive a higher correctness score, please provide the code for `math.js` and `app.js` within the `math-app` directory, demonstrating the creation and use of a custom module with `lodash`.
+- Add example usage of the `math` module and `lodash` functions in `app.js` for a more complete solution.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/package.json
+suggestions for improvement:
+- This JSON file is a `package.json` file, which is used to manage Node.js project dependencies. It doesn't contain any code that addresses the exercises in the chapter content.  The exercises involve creating and using modules (CommonJS and ES6), working with the `fs` module for file manipulation, and using external packages like `lodash` and `chalk`. This `package.json` only sets up the project environment by specifying dependencies; it doesn't implement any of the described functionality.  To get a non-zero correctness score, you need to provide the code for the exercises themselves (e.g., `products.js`, `shop.js`, `data.js`, `app.js`, `fileManager.js`, etc.).
+- Add the actual code for the exercises (Exercise 1 to Exercise 7) to receive a correctness score.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a metadata file generated by npm.  It doesn't contain any executable code.  To assess correctness, readability, performance, and security, we need the actual `app.js` file that uses the `chalk` package.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/package.json
+suggestions for improvement:
+- This JSON file is a `package.json` file for an npm project. It doesn't contain any code that addresses the exercises in the chapter content.  It only sets up the project to use the `chalk` package.
+- To receive a higher correctness score, provide code that implements the exercises described (e.g., creating the `products.js`, `shop.js`, `data.js`, `app.js` files as described in the exercises, demonstrating use of the `fs` module, creating and using custom modules, etc.).
+- The `package.json` is well-structured and easy to understand.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/todoApp/app.js
+suggestions for improvement:
+- The `listTasks()` method should ideally return the list of tasks instead of printing it directly. The current implementation prints the list twice because it's called both inside and outside `console.log()`.
+- Add error handling (e.g., for invalid task indices in `markTaskComplete` and `removeTask`) to make the code more robust.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/todoApp/todo.js
+suggestions for improvement:
+- The error handling in `markTaskComplete` could be improved.  Instead of throwing an error, it might be better to return a boolean indicating success or failure.  This allows the calling function to handle the error gracefully. 
+- Consider adding methods for removing tasks, editing tasks, and potentially persisting the todo list (e.g., saving to a file).
+- The `listTasks` method could be slightly more efficient by directly returning the `this.tasks` array after adding a completed status to each item. The existing method performs extra mapping. This improvement would be minor in terms of performance impact, but it streamlines the code.
+Correctness: 100%
+-----

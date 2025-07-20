@@ -1,0 +1,48 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/emojis.js
+suggestions for improvement:
+- The provided code only defines an array of emojis. It does not create an Express server, handle user input (POST requests via Fetch API), manage scores, or implement any of the game logic described in the instructions.
+- The code lacks the implementation of the Express server, the game logic (random emoji selection, answer checking, score tracking), and the user interface (HTML form).
+- Add server-side code to handle the game logic and the client-side code (HTML and JavaScript) for the user interface.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/models/emojis.js
+suggestions for improvement:
+- The provided code only defines an array of emoji objects. It does not implement any server-side logic using Express.js to handle the game,  process user guesses, or manage scores as required by the challenge.
+- The code lacks the crucial parts: an Express.js server, a game loop, form handling, POST request processing, score tracking, and a leaderboard.  It only provides the emoji data.
+- The challenge specifically requests using the Fetch API on the client-side (which is missing here) to POST data to the server. The server-side processing using Express to handle this is also missing.
+- Add server-side code using Express.js to create routes for handling game requests, processing user input, and updating scores.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/package-lock.json
+suggestions for improvement:
+- This is a `package-lock.json` file, not an implementation of the emoji guessing game.  It lists dependencies for a Node.js project using Express.js, but provides no actual game code.
+- The challenge requires building an Express API with a client-side (likely using Fetch API) to interact with it.  This file only shows dependencies, not the implementation of server-side or client-side logic.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/package.json
+suggestions for improvement:
+- This is a `package.json` file, not an implementation of the emoji guessing game.  The chapter requires building an Express API with a game implementation, this file only sets up the project structure.
+- Add server.js and implement the game logic as described in the chapter content.
+- Add client-side code (HTML, CSS, and JavaScript using Fetch API) to interact with the server's API endpoints.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/public/index.html
+suggestions for improvement:
+- The server-side code (missing from submission) needs to be implemented to handle `/question`, `/guess`, and `/leaderboard` routes.  This is crucial for the game's functionality.
+- Error handling is minimal. The code should include more robust error handling for network requests and edge cases (e.g., empty player name).
+- The leaderboard functionality is client-side only.  For a persistent leaderboard, the server should store and retrieve scores from a database (not implemented here).
+- Security: Input sanitization is missing. Player names should be sanitized to prevent XSS vulnerabilities.
+- Consider using a more efficient way to manage the leaderboard than refreshing it after each answer, like websockets for near real time updates.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day4/DailyChallenge/server.js
+suggestions for improvement:
+- Implement proper error handling for cases where the emoji data is unavailable or invalid.
+- Sanitize user inputs to prevent potential vulnerabilities (e.g., XSS).
+- Consider using a more robust database solution for storing the leaderboard data instead of in-memory storage.
+- Add input validation to the `/guess` route to handle potential malformed requests.
+- Improve the shuffling algorithm for better randomness; Fisher-Yates is a more reliable option.
+- Add more comprehensive logging to aid in debugging and monitoring.
+- The documentation for the APIs should be clearer, including the expected input and output formats and status codes.
+Correctness: 90%
+-----

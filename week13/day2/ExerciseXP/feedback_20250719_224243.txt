@@ -1,0 +1,106 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise1/products.js
+suggestions for improvement:
+- Add comments to explain the purpose of the `products` array and its elements.
+- Consider using a more descriptive variable name than `products`, such as `productCatalog` or `productInventory` to improve readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise1/shop.js
+suggestions for improvement:
+- The `products.js` file is missing, preventing a complete assessment of correctness.  The code assumes a structure for the `products` array that is not explicitly defined.
+- Add error handling.  If a product is not found, the code currently returns `undefined`.  It would be better to return a more informative message or throw an error.
+- Consider using a more robust search mechanism if the product names are expected to be complex or have variations (e.g., case-insensitive searches, partial matches).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- Add error handling for the case where the `people` array is empty to prevent division by zero.
+- Consider using more descriptive variable names (e.g., `totalAge` could be `sumOfAges`).
+- The comments are helpful but could be more concise. For instance, '// Run app.js...' is not strictly necessary.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise2/data.js
+suggestions for improvement:
+- The code is well-structured and easy to understand.  Consider adding comments to explain the purpose of the `people` array and the `export default` statement for enhanced readability.
+- While the performance is excellent for this small dataset, for significantly larger datasets, consider using more performant data structures if necessary for age calculation (though it's unlikely to be an issue here).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- The code only writes to 'Bye World.txt'.  It's missing the functionality to read from 'Hello World.txt' as instructed.
+- Add error handling for `readFile` to provide more robust file processing.
+- Consider using async/await for better readability and error handling in file operations.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/Exercise3/fileManager.js
+suggestions for improvement:
+- Add error handling for cases where the file doesn't exist in `readFile` (currently it just calls the callback with the error). Consider throwing an error instead of just passing it to the callback, allowing the calling function to handle errors more appropriately.  This is especially crucial for `writeFile`.
+- For improved error handling in both `readFile` and `writeFile`, consider using promises or async/await to simplify the callback hell. This is a better approach for modern Node.js.
+- The `writeFile` function lacks explicit error handling for situations where the file cannot be written to (e.g., insufficient permissions). Adding specific error handling for such scenarios would significantly enhance robustness.
+- In `app.js` (which is missing from the provided code), ensure the callbacks in the `readFile` and `writeFile` function calls are appropriately handled to manage potential errors.  If there's an error, a clear error message should be displayed to the user.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/file-explorer/copy-file.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/file-explorer/read-directory.js
+suggestions for improvement:
+- The provided code only addresses part of Exercise 7. It correctly implements the `read-directory.js` functionality, listing files in the current directory.  However, it's missing the `copy-file.js` implementation.
+- Error handling could be improved.  Instead of `throw err`, the code should provide more informative error messages to the user.
+- Add asynchronous error handling (using async/await or promises) for better practice and readability.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/app.js
+suggestions for improvement:
+- The code correctly uses the lodash library and a custom math module as described in Exercise 5. However, it doesn't demonstrate creating the `math.js` module, which is part of the exercise instructions.  The code should explicitly show the creation and export of the addition and multiplication functions within a `math.js` file.
+- Add comments to the `math.js` file explaining the functions and their purpose for better understanding.
+- Consider adding error handling (e.g., for non-numeric input) to the `math.js` functions to make them more robust.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/math.js
+suggestions for improvement:
+- The provided code is a simple module for addition and multiplication, but it does not address any of the exercises in the chapter content.  It needs to be replaced with code that implements the exercises involving file I/O, module imports/exports (CommonJS and ES6), and use of external packages like `lodash` and `chalk`.
+- The exercises involve creating multiple files (`products.js`, `shop.js`, `data.js`, `app.js`, `fileManager.js`, etc.) and utilizing the `fs` module for file operations. This code doesn't fulfill any of those requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a metadata file generated by npm. It describes the project's dependencies and their versions.  It does not contain any code related to the exercises in the chapter content, specifically exercises 1-7, which involve creating and using Node.js modules, working with the `fs` module, and utilizing packages like `lodash` and `chalk`.
+- To receive a higher correctness score, provide the actual JavaScript code for the exercises, not just the dependency information.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/math-app/package.json
+suggestions for improvement:
+- This is a `package.json` file, not a solution to any of the exercises.  It sets up a project using Node.js and lodash, but doesn't contain any code that addresses the exercises' requirements (working with the `fs` module, creating modules, etc.).
+- To receive a higher correctness score, provide the actual code that solves the exercises.  This JSON is only the project setup.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, not actual code implementing the exercises.  It shows that the `chalk` package is correctly installed.  To get a proper evaluation, please provide the `app.js` file from the `npm-beginner` directory that uses the `chalk` package.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/npm_beginner/package.json
+suggestions for improvement:
+- This JSON file is a `package.json` file, which is used to manage Node.js projects. It doesn't contain any code to solve the exercises in the chapter.  To receive a correctness score, you need to provide the actual code for the exercises (Exercise 1 through Exercise 7).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/todoApp/app.js
+suggestions for improvement:
+- The `listTasks()` method should ideally return a value instead of just printing to the console. This would make it more versatile and testable.  The current implementation prints the list twice.
+- Add error handling to the `markTaskComplete` method to handle cases where the task index is out of bounds or invalid.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week13/day2/ExerciseXP/todoApp/todo.js
+suggestions for improvement:
+- The error handling in `markTaskComplete` could be improved by providing more context in the error message (e.g., include the invalid index).
+- Consider adding a method to remove tasks from the list.
+- For larger lists, consider using a more efficient data structure than an array for improved performance (though for this small exercise, the array is sufficient).
+Correctness: 100%
+-----

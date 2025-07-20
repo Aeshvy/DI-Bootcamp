@@ -1,0 +1,17 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/47d2e6e31b5c087b31a28782c17c647fc403aa69/week12/day1/MiniProject2/converter.js
+suggestions for improvement:
+- Improve error handling to provide more specific user feedback. For example, if the API key is invalid or rate limits are exceeded, give a clear message.
+- Add input validation to ensure the user enters a numerical value for the amount.
+- Consider adding loading indicators to improve the user experience while fetching data and converting currencies.  A simple spinner or message would suffice.
+- Enhance styling to make the converter more visually appealing. This is purely cosmetic but greatly enhances user experience.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/47d2e6e31b5c087b31a28782c17c647fc403aa69/week12/day1/MiniProject2/index.html
+suggestions for improvement:
+- Implement proper error handling for API requests (e.g., network errors, invalid API keys).  Display informative messages to the user if the conversion fails.
+- Add input validation to ensure the amount entered is a valid number.
+- Consider using a more robust method for storing and managing the API key, rather than hardcoding it into the JavaScript. Environment variables or server-side configuration would be more secure.
+- Improve the styling of the converter to enhance its user experience.  A more visually appealing interface could significantly improve user engagement.
+- Add loading indicators to show the user that the API calls are in progress.
+Correctness: 80%
+-----

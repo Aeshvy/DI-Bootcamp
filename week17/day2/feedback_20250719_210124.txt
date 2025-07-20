@@ -1,0 +1,138 @@
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/eslint.config.js
+suggestions for improvement:
+- This ESLint configuration is not related to the exercises described in the chapter content.  The chapter focuses on React Router, Error Boundaries, JSON handling, and making HTTP requests. This code defines an ESLint configuration for JavaScript and React projects.
+- The configuration is well-structured and readable.  Using named exports improves maintainability.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/index.html
+suggestions for improvement:
+- The provided HTML file is a basic Vite + React setup. It doesn't contain any code addressing the exercises outlined in the chapter content.  The exercises involve creating components for error handling, routing, JSON display, and POST requests.  This HTML file only provides a structure for a React application, but doesn't implement any of the specified functionalities.
+- Add the necessary JavaScript components (ErrorBoundary, HomeScreen, ProfileScreen, ShopScreen, PostList, Example1, Example2, Example3) and implement the logic to fetch and display JSON data and handle routing and errors as described in the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm (Node Package Manager). It does not contain any React code related to the exercises described in the Chapter Content/Questions.  To score this accurately, please provide the actual React component code for the exercises. 
+- While the `package.json` lists necessary libraries (React Router Dom, React Bootstrap, etc.), this file alone does not demonstrate the implementation of Error Boundaries, React Router navigation, or JSON data handling as requested in the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/package.json
+suggestions for improvement:
+- Implement the ErrorBoundary component as described in step 1.  The provided `package.json` only sets up the project dependencies, it doesn't contain the actual code for the ErrorBoundary or the other components.
+- Implement the HomeScreen, ProfileScreen, and ShopScreen components with the images and error handling as specified.
+- Create the JSON file (posts.json, data.json) and implement the PostList, Example1, Example2, and Example3 components to display the JSON data. The `package.json` does not include this logic.
+- Add the `async await` function and button in App.js to fetch data using a POST request as described in Exercise 4.  Currently, there's no implementation of this functionality.
+- Add error handling for the fetch request in Exercise 4.  The instructions suggest implementing an error boundary, but this isn't present in the package.json
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/App.css
+suggestions for improvement:
+- The provided CSS code does not address any of the exercises outlined in the Chapter Content/Questions. It's a stylesheet for a React application, but it doesn't contain any JavaScript code to implement React state, event handlers, React Router, Error Boundaries, or JSON handling, which are the core focuses of the exercises.
+- To receive a non-zero correctness score, please provide the JavaScript code that implements the solutions to the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/App.jsx
+suggestions for improvement:
+- The `ErrorBoundary` component implementation is missing from the provided code.  The instructions specify creating this component with a `componentDidCatch` method and a state variable `hasError`.  This is crucial for Exercise 1.
+- The `HomeScreen`, `ProfileScreen`, and `ShopScreen` components are also missing.  These need to be created as functional components and render the specified images as instructed.
+- Exercise 2, 3, and 4 require the creation of `PostList.js`, `Example1.js`, `Example2.js`, `Example3.js`, and `Exercise4.js`. These files are missing, and their content needs to be implemented according to the exercise descriptions and expected output images.
+- Add error handling to the JSON fetching and parsing in Exercise 2 and 3 to gracefully handle potential network issues or invalid JSON data.
+- Consider using a more descriptive naming convention for components and files for better maintainability and readability (e.g., instead of `Exercise4`, use `PostJsonData`).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/ErrorBoundary.jsx
+suggestions for improvement:
+- The code for ErrorBoundary is excellent and directly addresses the requirements of Exercise 1, part 1.  Consider adding more informative error messages in a production environment, perhaps displaying `error` and `info` from `componentDidCatch`.
+- While the ErrorBoundary is correctly implemented, the rest of Exercise 1 (React Router integration and component creation) is missing.  The provided code only fulfills the first part of the exercise.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/Example1.jsx
+suggestions for improvement:
+- Consider using a more descriptive key than just the index in the `map` function.  A unique ID from the JSON data (if available) would be ideal.  If not, you could concatenate `item.platform` with `index` to make keys more meaningful and less prone to collision if data changes.
+- For improved readability, consider breaking down the JSX within the `map` function into smaller, reusable components.  This will make the code easier to understand and maintain.
+- Add error handling in case `data.SocialMedias` is undefined or null to prevent unexpected crashes.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/Example2.jsx
+suggestions for improvement:
+- Consider using more descriptive key names in the `map` function instead of just `index`. For example, you could use `lang.id` if your JSON data had IDs for each language or tool. This would improve the code's clarity and maintainability.
+- While functional components are generally preferred in React for their simplicity, the choice of a class component here is not inherently problematic if you find it more readable or need the features of class components for more complex logic.  If the class component is not needed, converting to a functional component would be a slight improvement.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/Example3.jsx
+suggestions for improvement:
+- The styling could be improved by using a CSS file instead of inline styles.  This enhances maintainability and readability.
+- Consider adding error handling for the case where `data.Experiences` is undefined or null.  This could prevent unexpected crashes if the JSON data is not loaded correctly.
+- The placeholder image could be replaced with a more appropriate solution if no image is available.  For example, handle the absence of an image path gracefully, perhaps with a default icon or text.
+- The `a` tag lacks a `rel` attribute; adding `rel='noopener noreferrer'` is a security best practice when targeting external links (if not internal).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/Exercise4.jsx
+suggestions for improvement:
+- The code could be improved by adding error handling for the case where the response status is not successful (e.g., 200 OK). Currently, it only catches network errors.
+- Consider adding loading state management to provide feedback to the user while the fetch operation is in progress.  A simple loading indicator would improve the user experience.
+- For better performance, especially with larger payloads, consider using a more efficient JSON serialization library than the built-in `JSON.stringify` if performance becomes a concern in a production environment.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/HomeScreen.jsx
+suggestions for improvement:
+- The provided code only implements a single, very basic component (`HomeScreen`) out of the many components and functionalities required by the exercises.  It doesn't address React Router, Error Boundaries, JSON handling, or fetching data.
+- The code needs to be expanded significantly to include `ErrorBoundary`, `ProfileScreen`, `ShopScreen`, `PostList`, `Example1`, `Example2`, and `Example3` components, along with the React Router setup and JSON data handling.
+- Implement the `componentDidCatch` method in the `ErrorBoundary` component to handle errors.
+- Fetch and display JSON data from the provided URLs in `PostList`, `Example1`, `Example2`, and `Example3` components.
+- Implement the POST request to the webhook URL as specified in Exercise 4.
+- Use Bootstrap components as instructed in the exercise.
+- Add proper error handling and loading states where necessary.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/PostList.jsx
+suggestions for improvement:
+- Consider adding error handling for the case where `posts.json` is not found or is malformed.  A try...catch block around the `posts.map` would be beneficial.
+- The styling could be improved using CSS modules or a CSS framework like styled-components for better maintainability and separation of concerns.
+- For larger datasets, consider using techniques like React.memo or virtualized lists to optimize performance.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/ProfileScreen.jsx
+suggestions for improvement:
+- The provided code only implements one of the many components required by the exercise. It correctly creates the `ProfileScreen` component as described, but it's missing the `ErrorBoundary`, `HomeScreen`, `ShopScreen`, `App.js` integration with React Router, JSON handling, and the `PostList` components from Exercises 1, 2, 3 and 4.
+- The exercise requires creating multiple components and integrating them with React Router, which is not shown in this code snippet.  It only addresses a small part of Exercise 1.
+- Add error handling to prevent crashes if unexpected data is encountered while parsing JSON in Exercises 2 and 3. Consider using try-catch blocks.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/ShopScreen.jsx
+suggestions for improvement:
+- No specific feedback.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/data.json
+suggestions for improvement:
+- The provided code is a JSON data structure.  It does not implement any of the React components or functionality described in the exercises.  It's missing the React code for Error Boundaries, React Router, component creation, JSON data fetching and display, and the POST request functionality.  The JSON data itself is correctly formatted, but it's not a solution to any of the exercises.
+- To achieve a higher correctness score, you need to provide the React code that uses this JSON data to fulfill the requirements of Exercises 1, 2, 3 and 4.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/index.css
+suggestions for improvement:
+- The provided CSS code does not address any of the exercises described in the Chapter Content/Questions.  It's a stylesheet, not a solution to the React-based tasks.
+- To get a non-zero correctness score, you need to provide JavaScript code that implements the  `ErrorBoundary`, React Router, JSON handling, and data fetching/posting as described in the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/main.jsx
+suggestions for improvement:
+- The provided code is only a basic React app setup. It does not implement any of the exercises (React Router, Error Boundary, JSON handling, etc.) described in the Chapter Content/Questions.  The exercises require creating components, routing, error handling, and interacting with JSON data, none of which are present in this code.
+- The code needs to implement all seven exercises described in the document to achieve a higher correctness score.
+- Add components for `ErrorBoundary`, `HomeScreen`, `ProfileScreen`, `ShopScreen`, `PostList`, `Example1`, `Example2`, and `Example3` as specified by the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/src/posts.json
+suggestions for improvement:
+- The provided code is a JSON array of post data. It's not a React component or any code that addresses the exercises in the chapter content.  To receive a correctness score, you need to provide React code that implements the ErrorBoundary, React Router, JSON data display, and POST request functionality as described in the exercises.
+- The JSON data is well-formatted and easy to read.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Aeshvy/DI-Bootcamp/blob/4ec0a91d06cf15dd200583a3dc01c12aa24cd2ea/week17/day2/vite.config.js
+suggestions for improvement:
+- The provided code is a Vite configuration file. It does not implement any of the exercises described in the chapter content.  It only sets up a development environment using Vite and the React plugin.
+- The chapter content describes several exercises involving React Router, Error Boundaries, JSON handling, and making API calls. This code does none of those things.
+- To receive a non-zero correctness score, you need to provide code that addresses at least one of the exercises outlined in the chapter.
+Correctness: 0%
+-----
